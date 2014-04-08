@@ -29,9 +29,15 @@
   <div data-role="footer">
     <h3>佐々木隆志</h3>
   </div>
+    <span id="gmail-user_email"></span>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<script>
+    $(document).on("pagecontainerload", function(){
+       $("#gmail-user_email").text="pagecontainerload";
+    });
+</script>
 おわり
 </body>
 </html>
