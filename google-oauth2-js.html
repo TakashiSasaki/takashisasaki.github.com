@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>インストールされたアプリに対するOAuth2</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css"/>
+    <link rel="stylesheet" href="icon.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<div data-role="page">
+    <header data-role="header">
+        <h3>インストールされたアプリに対するOAuth2</h3>
+        <a href="#panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+    </header>
+    <div class="ui-content" role="main">
+        <div class="ui-corner-all">
+            <div class="ui-bar ui-bar-a"><h3>①認可コードの取得</h3></div>
+            <div class="ui-body ui-body-a">
+                <p>リダイレクト先 OOB、レスポンスタイプ codeで認証サーバを呼び出す。
+                    認可コードが表示される。</p>
+                <a id="authorization_url_oob" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline"
+                   target="_blank">
+                    認可コードの取得 (oob)</a>
+
+                <p>リダイレクト先 http://localhost、レスポンスタイプ codeで認証サーバを呼び出す。
+                    localhostのウェブサーバが適切に設定されていればそこで認可コードを受け取ることができる。</p>
+                <a id="authorization_url_localhost" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline"
+                   target="_blank">
+                    認可コードの取得 (localhost)
+                </a>
+            </div>
+        </div>
+        <div class="ui-corner-all">
+            <div class="ui-corner-all">
+                <div class="ui-bar ui-bar-a">
+                    <h3>②アクセストークンの取得</h3></div>
+                <div class="ui-body ui-body-a">
+                    ローカルファイルシステム上のHTMLファイルからXMLHttpRequestを発行すると
+                    Originがnullに設定されるためサーバーから拒絶される場合が有ります。
+                    <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code">
+                    <button id="access_token_link" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">
+                        アクセストークンの取得
+                    </button>
+                    <input id="access_token_result" placeholder="結果がここに表示されます" readonly="true">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<script src="panel.js"></script>
+<script>
+    var token_url = "https://accounts.google.com/o/oauth2/token";
+    var client_id = "982049359064-m16bre9h586ao9q3hh08hau26v4m7c9i.apps.googleusercontent.com";
+    var client_secret = "4fNom33Z_nWujtQaFJzYIxjV";
+    var authorization_url_oob = "https://accounts.google.com/o/oauth2/auth?"
+            + "scope=email%20profile&"
+            + "state=%2Fprofile&"
+            + "redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&"
+            + "response_type=code&"
+            + "client_id=" + client_id;
+
+    var authorization_url_localhost = "https://accounts.google.com/o/oauth2/auth?"
+            + "scope=email%20profile&"
+            + "state=%2Fprofile&"
+            + "redirect_uri=http://localhost&"
+            + "response_type=code&"
+            + "client_id=" + client_id;
+
+    $(document).on("pagecreate", function (e, ui) {
+        $("#authorization_url_oob").attr("href", authorization_url_oob);
+        $("#authorization_url_localhost").attr("href", authorization_url_localhost);
+    });
+
+    $("#access_token_link").on("click", function () {
+                try {
+                    $.ajax(
+                            {
+                                type: "post",
+                                url: token_url,
+                                data: {
+                                    client_id: client_id,
+                                    client_secret: client_secret,
+                                    grant_type: "authorization_code",
+                                    code: $("#authorization_code").val(),
+                                    redirect_uri: "urn:ietf:wg:oauth:2.0:oob"
+                                }
+                            }
+                    ).done(function (e) {
+                                $("#access_token_result").val("done");
+                            }).fail(function (jqxhr, textstatus, e) {
+                                $("#access_token_result").val(textstatus);
+                            }).always(function (e) {
+                            });
+                }
+                catch (e) {
+                    $("#access_token_result").val(e);
+                }
+            }
+    );
+</script>
+</body>
+</html>

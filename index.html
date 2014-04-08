@@ -1,38 +1,45 @@
 <html>
 <head><title>ぼく</title>
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css" />
-<link rel="stylesheet" href="icon.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css"/>
+    <link rel="stylesheet" href="icon.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
 <div data-role="page">
-  <header data-role="header" data-position="fixed"
-    data-add-back-btn="true" data-back-btn-text="BACK" data-back-btn-theme="a">
-    <h1>よく使うリンク</h1>
-  </header>
-  <div class="ui-content" role="main">
-    <span>
-    <button class="ui-btn ui-btn-icon-left ui-icon-gmail ui-btn-inline">Gmail2</button>
-    <button class="ui-btn ui-btn-icon-left ui-icon-gmail ui-btn-inline">aaa</button>
-    <a href="https://mail.google.com/mail/u/0/" class="ui-btn ui-icon-arrow-l">Gmail</a>
-    <a href="http://keep.google.com/keep/" class="ui-btn ui-icon-keep">Google Keep</a>
-        </span>
-    <ul>
-      <li><a href="http://twitter.com/" class="ui-btn">Twitter</a></li>
-      <li><a href="https://picasaweb.google.com/lh/myphotos?noredirect=1" class="ui-btn">Picasa Web Album</a></li>
-      <li><a href="https://plus.google.com/photos/116787418128856974153/albums" class="ui-btn">Google+ アルバム</a></li>
-      <li><a href="https://plus.google.com/photos" class="ui-btn">Google+ 写真</a></li>
-      <li><a href="https://www.google.com/calendar/render" class="ui-btn">Google カレンダー</a></li>
-      <li><a href="http://www.yahoo.co.jp/" class="ui-btn">Yahoo! Japan</a></li>
-    </ul>
-  </div>
-  
-  <div data-role="footer">
-    <h3>佐々木隆志</h3>
-  </div>
+    <header data-role="header" data-position="fixed">
+        <a href="#panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+
+        <h1>takashisasaki.github.io</h1>
+    </header>
+    <div class="ui-content" role="main">
+        <div>
+            <a href="https://mail.google.com/mail/u/0/" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-gmail"
+               target="_blank">Gmail</a>
+            <a href="http://keep.google.com" class="ui-btn ui-btn-icon-left ui-icon-keep ui-btn-inline" target="_blank">Google
+                Keep</a>
+            <a href="http://twitter.com/" class="ui-btn ui-btn-icon-left ui-btn-inline ui-icon-twitter" target="_blank">Twitter</a>
+            <a href="https://picasaweb.google.com" class="ui-btn ui-btn-icon-left ui-icon-picasaweb ui-btn-inline"
+               target="_blank">Picasa Web Albums</a>
+            <a href="https://plus.google.com/photos" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-google-photo"
+               target="_blank">Google+ フォト</a>
+            <a href="https://www.google.com/calendar/render"
+               class="ui-btn ui-btn-icon-left ui-icon-google-calendar ui-btn-inline" target="_blank">Google カレンダー</a>
+            <a href="http://www.yahoo.co.jp/" class="ui-btn ui-btn-icon-left ui-icon-google-yahoo ui-btn-inline">Yahoo!
+                Japan</a>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h3></h3>
+    </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
 おわり
+<script>
+    $(document).on("pagecreate", function (e, ui) {
+    });
+</script>
+<script src="panel.js"></script>
 </body>
 </html>
