@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/takashisasaki.github.com.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icon.css" afterPath="$PROJECT_DIR$/icon.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/googel-oauth2-js.html" afterPath="$PROJECT_DIR$/googel-oauth2-js.html" />
     </list>
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="27" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.86440676" vertical-offset="34" max-vertical-offset="833">
+            <state line="4" column="0" selection-start="142" selection-end="184" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="833">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="googel-oauth2-js.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/googel-oauth2-js.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="53" selection-start="3813" selection-end="3813" vertical-scroll-proportion="0.81991524" vertical-offset="1024" max-vertical-offset="1649">
               <folding />
             </state>
           </provider>
@@ -63,12 +68,13 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/icon.css" />
         <option value="$PROJECT_DIR$/googel-oauth2-js" />
+        <option value="$PROJECT_DIR$/googel-oauth2-js.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="y" value="53" />
+    <option name="x" value="178" />
+    <option name="y" value="54" />
     <option name="width" value="988" />
     <option name="height" value="987" />
   </component>
@@ -160,6 +166,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -364,7 +371,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="53" width="988" height="987" extended-state="0" />
+    <frame x="178" y="54" width="988" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -441,7 +448,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.86440676" vertical-offset="34" max-vertical-offset="833">
+        <state line="4" column="0" selection-start="142" selection-end="184" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/googel-oauth2-js.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="53" selection-start="3813" selection-end="3813" vertical-scroll-proportion="0.81991524" vertical-offset="1024" max-vertical-offset="1649">
           <folding />
         </state>
       </provider>
