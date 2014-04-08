@@ -4,7 +4,6 @@
     <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icon.css" afterPath="$PROJECT_DIR$/icon.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="59" selection-start="601" selection-end="601" vertical-scroll-proportion="0.28651685" vertical-offset="102" max-vertical-offset="901">
+            <state line="32" column="12" selection-start="1711" selection-end="1711" vertical-scroll-proportion="0.39513108" vertical-offset="333" max-vertical-offset="867">
               <folding />
             </state>
           </provider>
@@ -75,7 +74,7 @@
       <file leaf-file-name="icon.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/icon.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="99" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="697">
+            <state line="36" column="16" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -548,14 +547,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/icon.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="99" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="697">
+        <state line="36" column="16" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="59" selection-start="601" selection-end="601" vertical-scroll-proportion="0.28651685" vertical-offset="102" max-vertical-offset="901">
+        <state line="32" column="12" selection-start="1711" selection-end="1711" vertical-scroll-proportion="0.39513108" vertical-offset="333" max-vertical-offset="867">
           <folding />
         </state>
       </provider>

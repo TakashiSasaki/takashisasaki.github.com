@@ -33,3 +33,15 @@
   background-color: transparent;
   background-size: contain;
 }
+
+.ui-icon-google-calendar:after {
+  background-image: url("http://upload.wikimedia.org/wikipedia/commons/e/e9/Google_Calendar.png");
+  background-color: transparent;
+  background-size: contain;
+}
+
+.ui-icon-google-yahoo:after {
+  background-image: url("http://www.banabana.net/img-top/yahoo-icon.png");
+  background-color: transparent;
+  background-size: contain;
+}
