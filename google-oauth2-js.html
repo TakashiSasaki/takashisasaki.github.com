@@ -7,7 +7,10 @@
 </head>
 <body>
 <div data-role="page">
-    <header data-role="header"><h3>インストールされたアプリに対するOAuth2</h3></header>
+    <header data-role="header">
+        <h3>インストールされたアプリに対するOAuth2</h3>
+        <a href="#panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+    </header>
     <div class="ui-content" role="main">
         <div class="ui-corner-all">
             <div class="ui-bar ui-bar-a"><h3>①認可コードの取得</h3></div>
@@ -45,6 +48,7 @@
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<script src="panel.js"></script>
 <script>
     var token_url = "https://accounts.google.com/o/oauth2/token";
     var client_id = "982049359064-m16bre9h586ao9q3hh08hau26v4m7c9i.apps.googleusercontent.com";
@@ -94,7 +98,6 @@
                 }
             }
     );
-
 </script>
 </body>
 </html>
