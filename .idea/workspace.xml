@@ -28,7 +28,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="142" selection-end="184" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="833">
+            <state line="8" column="28" selection-start="301" selection-end="320" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="833">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="googel-oauth2-js.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/googel-oauth2-js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="53" selection-start="3813" selection-end="3813" vertical-scroll-proportion="0.81991524" vertical-offset="1024" max-vertical-offset="1649">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
               <folding />
             </state>
           </provider>
@@ -46,7 +46,7 @@
       <file leaf-file-name="icon.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/icon.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="374">
+            <state line="5" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
@@ -73,8 +73,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="178" />
-    <option name="y" value="54" />
+    <option name="x" value="43" />
+    <option name="y" value="71" />
     <option name="width" value="988" />
     <option name="height" value="987" />
   </component>
@@ -371,7 +371,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="178" y="54" width="988" height="987" extended-state="0" />
+    <frame x="43" y="71" width="988" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -448,14 +448,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="142" selection-end="184" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="833">
+        <state line="8" column="28" selection-start="301" selection-end="320" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="833">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/googel-oauth2-js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="53" selection-start="3813" selection-end="3813" vertical-scroll-proportion="0.81991524" vertical-offset="1024" max-vertical-offset="1649">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
           <folding />
         </state>
       </provider>
