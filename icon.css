@@ -10,3 +10,8 @@
   background-size: contain;
 }
 
+.ui-icon-oauth:after {
+  background-image: url("https://developers.google.com/oauthplayground/assets/images/oauth-2-sm.png");
+  background-color: transparent;
+  background-size: contain;
+}
