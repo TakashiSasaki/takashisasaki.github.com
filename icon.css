@@ -10,3 +10,38 @@
   background-size: contain;
 }
 
+.ui-icon-oauth:after {
+  background-image: url("https://developers.google.com/oauthplayground/assets/images/oauth-2-sm.png");
+  background-color: transparent;
+  background-size: contain;
+}
+
+.ui-icon-twitter:after {
+  background-image: url("https://pbs.twimg.com/profile_images/1837373378/twitter1.png");
+  background-color: transparent;
+  background-size: contain;
+}
+
+.ui-icon-picasaweb:after {
+  background-image: url("https://lh5.googleusercontent.com/-kbhBHRi1GDg/Uc-PmiP_y0I/AAAAAAAAGpg/dZJyg-LSUhM/");
+  background-color: transparent;
+  background-size: contain;
+}
+
+.ui-icon-google-photo:after {
+  background-image: url("http://www.iboostup.com/resource?a=r&t=thumbnail&i=com.google.gpautobackup");
+  background-color: transparent;
+  background-size: contain;
+}
+
+.ui-icon-google-calendar:after {
+  background-image: url("http://upload.wikimedia.org/wikipedia/commons/e/e9/Google_Calendar.png");
+  background-color: transparent;
+  background-size: contain;
+}
+
+.ui-icon-google-yahoo:after {
+  background-image: url("http://www.banabana.net/img-top/yahoo-icon.png");
+  background-color: transparent;
+  background-size: contain;
+}
