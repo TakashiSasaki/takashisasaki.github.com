@@ -1,6 +1,6 @@
 <html>
 <head><title>ぼく</title>
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css" />
 <link rel="stylesheet" href="icon.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
@@ -12,8 +12,8 @@
   </header>
   <div class="ui-content" role="main">
     <span>
-    <button class="ui-btn ui-icon-arrow-l">Gmail2</button>
-    <a href="https://mail.google.com/mail/u/0/" class="ui-btn ui-icon-arrow-l">Gmail</a>
+    <button class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-gmail">Gmail2</button>
+    <a href="https://mail.google.com/mail/u/0/" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-gmail">Gmail</a>
     <a href="http://keep.google.com/keep/" class="ui-btn ui-icon-keep">Google Keep</a>
     </span>
     <ul>
@@ -24,20 +24,20 @@
       <li><a href="https://www.google.com/calendar/render" class="ui-btn">Google カレンダー</a></li>
       <li><a href="http://www.yahoo.co.jp/" class="ui-btn">Yahoo! Japan</a></li>
     </ul>
+    <span id="test"></span>
   </div>
   
   <div data-role="footer">
     <h3>佐々木隆志</h3>
   </div>
-    <span id="gmail-user_email"></span>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+おわり
 <script>
-    $(document).on("pagecontainerload", function(){
-       $("#gmail-user_email").text="pagecontainerload";
+    $(document).on("pagecreate", function(e,ui){
+        $("#test").text("pagecreate");
     });
 </script>
-おわり
 </body>
 </html>
