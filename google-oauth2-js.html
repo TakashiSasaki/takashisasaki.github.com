@@ -28,23 +28,28 @@
                     認可コードの取得 (localhost)
                 </a>
             </div>
+            <div class="ui-bar ui-bar-a">
+                <h3>②認可コードをアクセストークンへ交換</h3></div>
+            <div class="ui-body ui-body-a">
+                ローカルファイルシステム上のHTMLファイルからXMLHttpRequestを発行すると
+                Originがnullに設定されるためサーバーから拒絶される。
+                <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code">
+                <button id="access_token_link" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">
+                    アクセストークンの取得
+                </button>
+                <input id="access_token_result" placeholder="結果がここに表示されます" readonly="true">
+            </div>
         </div>
         <div class="ui-corner-all">
-            <div class="ui-corner-all">
-                <div class="ui-bar ui-bar-a">
-                    <h3>②アクセストークンの取得</h3></div>
-                <div class="ui-body ui-body-a">
-                    ローカルファイルシステム上のHTMLファイルからXMLHttpRequestを発行すると
-                    Originがnullに設定されるためサーバーから拒絶される場合が有ります。
-                    <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code">
-                    <button id="access_token_link" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">
-                        アクセストークンの取得
-                    </button>
-                    <input id="access_token_result" placeholder="結果がここに表示されます" readonly="true">
-                </div>
+            <div class="ui-bar ui-bar-a">
+                <h3>アクセストークンを取得</h3>
+            </div>
+            <div class="ui-body ui-body-a">
+            <a id="authorization_url_web" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">アクセストークンを取得</a>
             </div>
         </div>
     </div>
+</div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
@@ -60,16 +65,26 @@
             + "response_type=code&"
             + "client_id=" + client_id;
 
-    var authorization_url_localhost = "https://accounts.google.com/o/oauth2/auth?"
+    var authorization_base_url = "https://accounts.google.com/o/oauth2/auth"
+    var authorization_url_localhost = authorization_base_url + "?"
             + "scope=email%20profile&"
             + "state=%2Fprofile&"
             + "redirect_uri=http://localhost&"
             + "response_type=code&"
             + "client_id=" + client_id;
 
+    var web_client_id = "982049359064-khobeosb81scm9kt1387mg78o399t71u.apps.googleusercontent.com";
+    var authorization_url_web = authorization_base_url + "?"
+            + "scope=email%20profile&"
+            + "state=%2Fprofile&"
+            + "redirect_uri=http://takashisasaki.github.io/google-oauth2-js.html&"
+            + "response_type=token&"
+            + "client_id=" + web_client_id;
+
     $(document).on("pagecreate", function (e, ui) {
         $("#authorization_url_oob").attr("href", authorization_url_oob);
         $("#authorization_url_localhost").attr("href", authorization_url_localhost);
+        $("#authorization_url_web").attr("href", authorization_url_web);
     });
 
     $("#access_token_link").on("click", function () {
