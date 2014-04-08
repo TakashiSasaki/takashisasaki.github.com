@@ -46,15 +46,23 @@
             </div>
             <div class="ui-body ui-body-a">
             <a id="authorization_url_web" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">アクセストークンを取得</a>
+                <input readonly="true" id="authorization_url_web_input">
             </div>
         </div>
     </div>
 </div>
-</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<script src="http://url.websanova.com/url.min.js"></script>
 <script src="panel.js"></script>
 <script>
+    var base_url = window.url("protocol") + "://" + window.url("hostname") + ":" +
+            window.url("port") + window.url("path");
+
+    if(window.url("#access_token") != null){
+        alert("access_token = " + window.url("#access_token"));
+    }
+
     var token_url = "https://accounts.google.com/o/oauth2/token";
     var client_id = "982049359064-m16bre9h586ao9q3hh08hau26v4m7c9i.apps.googleusercontent.com";
     var client_secret = "4fNom33Z_nWujtQaFJzYIxjV";
@@ -76,16 +84,18 @@
     var web_client_id = "982049359064-khobeosb81scm9kt1387mg78o399t71u.apps.googleusercontent.com";
     var authorization_url_web = authorization_base_url + "?"
             + "scope=email%20profile&"
-            + "state=%2Fprofile&"
-            + "redirect_uri=http://takashisasaki.github.io/google-oauth2-js.html&"
+            + "redirect_uri=" + encodeURIComponent(base_url) + "&"
             + "response_type=token&"
             + "client_id=" + web_client_id;
+
 
     $(document).on("pagecreate", function (e, ui) {
         $("#authorization_url_oob").attr("href", authorization_url_oob);
         $("#authorization_url_localhost").attr("href", authorization_url_localhost);
         $("#authorization_url_web").attr("href", authorization_url_web);
+        $("#authorization_url_web_input").val(authorization_url_web);
     });
+
 
     $("#access_token_link").on("click", function () {
                 try {
