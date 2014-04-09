@@ -97,15 +97,14 @@
             + "response_type=code&"
             + "client_id=" + native_app_client_id;
 
-    var authorization_base_url = "https://accounts.google.com/o/oauth2/auth"
-    var authorization_url_localhost = authorization_base_url + "?"
+    var authorization_url_localhost = auth_endpoint + "?"
             + "scope=email%20profile&"
             + "state=%2Fprofile&"
             + "redirect_uri=http://localhost&"
             + "response_type=code&"
             + "client_id=" + native_app_client_id;
 
-    var authorization_url_web = authorization_base_url + "?"
+    var authorization_url_web = auth_endpoint + "?"
             + "scope=email%20profile&"
             + "redirect_uri=" + encodeURIComponent(base_url) + "&"
             + "response_type=token&"
@@ -127,8 +126,8 @@
                                 type: "post",
                                 url: token_endpoint,
                                 data: {
-                                    client_id: client_id,
-                                    client_secret: client_secret,
+                                    client_id: native_app_client_id,
+                                    client_secret: native_app_client_secret,
                                     grant_type: "authorization_code",
                                     code: $("#authorization_code").val(),
                                     redirect_uri: "http://localhost"
