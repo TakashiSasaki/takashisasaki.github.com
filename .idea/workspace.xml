@@ -37,7 +37,7 @@
       <file leaf-file-name="google-oauth2-js.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="39" selection-start="3769" selection-end="3769" vertical-scroll-proportion="0.19101124" vertical-offset="1275" max-vertical-offset="2278">
+            <state line="51" column="31" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.64981276" vertical-offset="520" max-vertical-offset="2584">
               <folding />
             </state>
           </provider>
@@ -107,8 +107,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="334" />
-    <option name="y" value="133" />
+    <option name="x" value="57" />
+    <option name="y" value="148" />
     <option name="width" value="988" />
     <option name="height" value="987" />
   </component>
@@ -408,7 +408,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="334" y="133" width="988" height="987" extended-state="0" />
+    <frame x="57" y="148" width="988" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -650,7 +650,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="39" selection-start="3769" selection-end="3769" vertical-scroll-proportion="0.19101124" vertical-offset="1275" max-vertical-offset="2278">
+        <state line="51" column="31" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.64981276" vertical-offset="520" max-vertical-offset="2584">
           <folding />
         </state>
       </provider>
