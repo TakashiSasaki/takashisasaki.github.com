@@ -37,7 +37,7 @@
       <file leaf-file-name="google-oauth2-js.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="31" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.64981276" vertical-offset="520" max-vertical-offset="2584">
+            <state line="58" column="25" selection-start="2689" selection-end="2689" vertical-scroll-proportion="-0.5093633" vertical-offset="1258" max-vertical-offset="2635">
               <folding />
             </state>
           </provider>
@@ -193,7 +193,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="editor" />
+    <property name="options.lastSelected" value="reference.settings.ide.settings.web.browsers" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -650,7 +650,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="31" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.64981276" vertical-offset="520" max-vertical-offset="2584">
+        <state line="58" column="25" selection-start="2689" selection-end="2689" vertical-scroll-proportion="-0.5093633" vertical-offset="1258" max-vertical-offset="2635">
           <folding />
         </state>
       </provider>

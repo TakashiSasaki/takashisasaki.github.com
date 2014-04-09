@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>OAuth2における認可の実験</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css"/>
     <link rel="stylesheet" href="icon.css"/>
@@ -48,8 +50,9 @@
             <div class="ui-bar ui-bar-a">
                 <h3>②認可コードをアクセストークンへ交換</h3></div>
             <div class="ui-body ui-body-a">
-                ローカルファイルシステム上のHTMLファイルからXMLHttpRequestを発行すると
-                Originがnullに設定されるためサーバーから拒絶される。
+                <p>残念ながらXmlHttpRequestを使って認可コードをアクセストークンに交換しようとしても、
+                    サーバ側がAccess-Control-Allow-Origin:*を付けるなどの方法でクロスドメイン制約を
+                    外してくれていないとたいていのブラウザでは動かない。</p>
                 <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code">
                 <button id="access_token_link" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">
                     アクセストークンの取得
@@ -126,7 +129,7 @@
                                     client_secret: client_secret,
                                     grant_type: "authorization_code",
                                     code: $("#authorization_code").val(),
-                                    redirect_uri: "urn:ietf:wg:oauth:2.0:oob"
+                                    redirect_uri: "http://localhost"
                                 }
                             }
                     ).done(function (e) {
