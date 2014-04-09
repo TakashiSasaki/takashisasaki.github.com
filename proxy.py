@@ -2,6 +2,7 @@ __author__ = 'Takashi SASAKI'
 import http.server
 import logging
 import cgi
+import json
 
 
 def do_GET(self):
@@ -35,5 +36,8 @@ def do_POST(self):
     logging.info(self.headers["Content-Type"])
     body = self.rfile.read(body_len)
     decoded_body = cgi.parse_qs(body)
-    logging.info(decoded_body)
-    self.wfile.write(decoded_body[b"ajax"][0])
+    json_bytes = decoded_body[b"ajax"][0]
+    json_string = json_bytes.decode("UTF-8")
+    logging.info(json_string)
+    decoded_json = json.loads(json_string)
+    self.wfile.write(bytes(decoded_json["url"], "UTF-8"))
