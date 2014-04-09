@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/google-oauth2-js.html" afterPath="$PROJECT_DIR$/google-oauth2-js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icon.css" afterPath="$PROJECT_DIR$/icon.css" />
     </list>
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="google-oauth2-js.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="74" selection-start="611" selection-end="611" vertical-scroll-proportion="0.38202247" vertical-offset="34" max-vertical-offset="3332">
+            <state line="167" column="0" selection-start="7164" selection-end="7164" vertical-scroll-proportion="0.5543071" vertical-offset="2543" max-vertical-offset="3434">
               <folding />
             </state>
           </provider>
@@ -102,8 +101,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/google-oauth2-web.html" />
         <option value="$PROJECT_DIR$/panel.js" />
-        <option value="$PROJECT_DIR$/google-oauth2-js.html" />
         <option value="$PROJECT_DIR$/icon.css" />
+        <option value="$PROJECT_DIR$/google-oauth2-js.html" />
       </list>
     </option>
   </component>
@@ -651,7 +650,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="74" selection-start="611" selection-end="611" vertical-scroll-proportion="0.38202247" vertical-offset="34" max-vertical-offset="3332">
+        <state line="167" column="0" selection-start="7164" selection-end="7164" vertical-scroll-proportion="0.5543071" vertical-offset="2543" max-vertical-offset="3434">
           <folding />
         </state>
       </provider>
