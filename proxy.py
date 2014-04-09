@@ -4,6 +4,8 @@ import logging
 import cgi
 import json
 import urllib.parse
+import urllib.request
+import urllib.response
 import http.client
 import ssl
 
@@ -20,7 +22,7 @@ def do_GET(self):
     <textarea name="ajax_option" cols="60" rows="10">
         {
             "type": "get",
-            "url":"http://localhost?a=b#c=d",
+            "url":"http://www.yahoo.co.jp/index.html?a=b#c=d",
             "data": {
                 "param1":"value1",
                 "param2":"value2"
@@ -67,6 +69,7 @@ def proxy_post(self, ajax_option):
     password = parsed_url.password
     hostname = parsed_url.hostname
     port = parsed_url.port
+
     if scheme == "http" or scheme == "HTTP":
         if port is None:
             port = 80
@@ -77,4 +80,29 @@ def proxy_post(self, ajax_option):
         context = ssl.create_default_context()
         http_connection = http.client.HTTPConnection(netloc, port, context=context)
 
-    http_connection.request(ajax_option.type, "/" + ajax_option.path)
+    query_from_url = cgi.parse_qs(query)
+    for k in query_from_url.keys():
+        query_from_url[k] = query_from_url[k][0]
+    query_from_ajax_option = ajax_option.get("data")
+    query_merged = {}
+    query_merged.update(query_from_url)
+    query_merged.update(query_from_ajax_option)
+
+    if ajax_option.get("type") in ["GET", "get"]:
+        if len(query_merged) > 0:
+            url = path + "?" + urllib.parse.urlencode(query_merged)
+            http_connection.request("GET", url)
+        else:
+            http_connection.request("GET", path)
+
+    if ajax_option.get("type") in ["POST", "post"]:
+        if len(query_from_url) > 0:
+            url = path + "?" + urllib.parse.urlencode(query_from_url)
+            body = urllib.parse.urlencode(query_from_ajax_option)
+            http_connection.request("POST", url, body)
+        else:
+            body = urllib.parse.urlencode(query_from_ajax_option)
+            http_connection.request("POST", path, body)
+
+    http_response = http_connection.getresponse()
+    logging.info("status = %s" % http_response.status)
