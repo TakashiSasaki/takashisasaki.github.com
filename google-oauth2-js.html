@@ -52,12 +52,15 @@
             <div class="ui-body ui-body-a">
                 <p>残念ながらXmlHttpRequestを使って認可コードをアクセストークンに交換しようとしても、
                     サーバ側がAccess-Control-Allow-Origin:*を付けるなどの方法でクロスドメイン制約を
-                    外してくれていないとたいていのブラウザでは動かない。</p>
+                    外してくれていないとたいていのブラウザでは動かない。
+                    下のボタンをクリックするとXmlHttpRequestが実行されるが、
+                    サーバーからのレスポンスを拒否するので何も起こらない。</p>
                 <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code">
+                <textarea placeholder="POSTすべきデータがここに表示されます" readonly="true"
+                          id="post_data_to_exchange_authorization_code_to_access_token"></textarea>
                 <button id="access_token_link" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">
-                    アクセストークンの取得
+                    認可コードをアクセストークンへ交換
                 </button>
-                <input id="access_token_result" placeholder="結果がここに表示されます" readonly="true">
             </div>
         </div>
         <div class="ui-corner-all">
@@ -118,33 +121,44 @@
         $("#authorization_url_web_input").val(authorization_url_web);
     });
 
+    $("#authorization_code").on("change",
+            function () {
+                var data = {
+                    client_id: native_app_client_id,
+                    client_secret: native_app_client_secret,
+                    grant_type: "authorization_code",
+                    code: $("#authorization_code").val(),
+                    redirect_uri: "http://localhost"
+                }
+                $("#post_data_to_exchange_authorization_code_to_access_token").val(window.JSON.stringify(data));
+            }
+    );
 
     $("#access_token_link").on("click", function () {
+                var data = window.JSON.parse(
+                        $("#post_data_to_exchange_authorization_code_to_access_token").val());
                 try {
                     $.ajax(
                             {
                                 type: "post",
                                 url: token_endpoint,
-                                data: {
-                                    client_id: native_app_client_id,
-                                    client_secret: native_app_client_secret,
-                                    grant_type: "authorization_code",
-                                    code: $("#authorization_code").val(),
-                                    redirect_uri: "http://localhost"
-                                }
+                                data: data
                             }
-                    ).done(function (e) {
+                    ).
+                            done(function (e) {
                                 $("#access_token_result").val("done");
                             }).fail(function (jqxhr, textstatus, e) {
                                 $("#access_token_result").val(textstatus);
                             }).always(function (e) {
                             });
                 }
-                catch (e) {
+                catch
+                        (e) {
                     $("#access_token_result").val(e);
                 }
             }
-    );
+    )
+    ;
 </script>
 </body>
 </html>
