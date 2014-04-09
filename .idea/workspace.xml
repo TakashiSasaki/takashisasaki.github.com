@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/google-oauth2-js.html" afterPath="$PROJECT_DIR$/google-oauth2-js.html" />
-    </list>
+    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="" />
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +35,7 @@
       <file leaf-file-name="google-oauth2-js.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="67" selection-start="4901" selection-end="4901" vertical-scroll-proportion="0.4456929" vertical-offset="1666" max-vertical-offset="3791">
+            <state line="109" column="8" selection-start="4774" selection-end="4774" vertical-scroll-proportion="-2.6292136" vertical-offset="3257" max-vertical-offset="3791">
               <folding />
             </state>
           </provider>
@@ -107,8 +105,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="57" />
-    <option name="y" value="148" />
+    <option name="x" value="83" />
+    <option name="y" value="75" />
     <option name="width" value="988" />
     <option name="height" value="987" />
   </component>
@@ -408,7 +406,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="148" width="988" height="987" extended-state="0" />
+    <frame x="83" y="75" width="988" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -650,7 +648,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="67" selection-start="4901" selection-end="4901" vertical-scroll-proportion="0.4456929" vertical-offset="1666" max-vertical-offset="3791">
+        <state line="109" column="8" selection-start="4774" selection-end="4774" vertical-scroll-proportion="-2.6292136" vertical-offset="3257" max-vertical-offset="3791">
           <folding />
         </state>
       </provider>
