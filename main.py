@@ -19,7 +19,10 @@ class MyHttpRequestHandler(http.server.BaseHTTPRequestHandler):
         logging.info(request)
         http.server.BaseHTTPRequestHandler.__init__(self, request, client_address, server)
 
-    def do_GET(self):
+    def do_POST(self):
+        self.do_GET(post=True)
+
+    def do_GET(self, post=False):
         self.pathList = self.path.split('/')[1:]
         self.parsedUrl = urllib.parse.urlparse(self.path)
         self.parsedQuery = cgi.parse_qs(self.parsedUrl.query)
@@ -30,8 +33,12 @@ class MyHttpRequestHandler(http.server.BaseHTTPRequestHandler):
         try:
             if (len(self.pathList) == 1):
                 module = __import__(self.pathList[0], globals=globals(), locals=locals())
-                module.do_GET(self)
-                return
+                if post == True:
+                    module.do_POST(self)
+                    return
+                else:
+                    module.do_GET(self)
+                    return
         except ImportError as e:
             pass
         except ValueError as e:
@@ -54,5 +61,5 @@ class MyHttpRequestHandler(http.server.BaseHTTPRequestHandler):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     logging.info("IsUserAnAdmin = %s" % ctypes.windll.shell32.IsUserAnAdmin())
-    httpd = MyHttpServer(("127.0.0.1", 8000), MyHttpRequestHandler)
+    httpd = MyHttpServer(("127.0.0.1", 80), MyHttpRequestHandler)
     httpd.serve_forever()
