@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy.py" afterPath="$PROJECT_DIR$/proxy.py" />
-    </list>
+    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="" />
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,7 +58,7 @@
       <file leaf-file-name="proxy.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proxy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="54" selection-start="4467" selection-end="4467" vertical-scroll-proportion="0.6320939" vertical-offset="2006" max-vertical-offset="2533">
+            <state line="119" column="35" selection-start="3711" selection-end="3711" vertical-scroll-proportion="0.5655577" vertical-offset="1734" max-vertical-offset="2533">
               <folding>
                 <element signature="e#30#48#0" expanded="true" />
               </folding>
@@ -107,8 +105,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="295" />
-    <option name="y" value="126" />
+    <option name="x" value="182" />
+    <option name="y" value="142" />
     <option name="width" value="988" />
     <option name="height" value="987" />
   </component>
@@ -365,7 +363,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="295" y="126" width="988" height="987" extended-state="0" />
+    <frame x="182" y="142" width="988" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -456,7 +454,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/proxy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="54" selection-start="4467" selection-end="4467" vertical-scroll-proportion="0.6320939" vertical-offset="2006" max-vertical-offset="2533">
+        <state line="119" column="35" selection-start="3711" selection-end="3711" vertical-scroll-proportion="0.5655577" vertical-offset="1734" max-vertical-offset="2533">
           <folding>
             <element signature="e#30#48#0" expanded="true" />
           </folding>
