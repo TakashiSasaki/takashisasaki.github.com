@@ -86,14 +86,15 @@
 
     var token_endpoint = "https://accounts.google.com/o/oauth2/token";
     var auth_endpoint = "https://accounts.google.com/o/oauth2/auth";
-    var client_id = "982049359064-m16bre9h586ao9q3hh08hau26v4m7c9i.apps.googleusercontent.com";
-    var client_secret = "4fNom33Z_nWujtQaFJzYIxjV";
+    var native_app_client_id = "982049359064-m16bre9h586ao9q3hh08hau26v4m7c9i.apps.googleusercontent.com";
+    var native_app_client_secret = "4fNom33Z_nWujtQaFJzYIxjV";
+
     var authorization_url_oob = auth_endpoint + "?"
             + "scope=email%20profile&"
             + "state=%2Fprofile&"
             + "redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&"
             + "response_type=code&"
-            + "client_id=" + client_id;
+            + "client_id=" + native_app_client_id;
 
     var authorization_base_url = "https://accounts.google.com/o/oauth2/auth"
     var authorization_url_localhost = authorization_base_url + "?"
@@ -101,7 +102,7 @@
             + "state=%2Fprofile&"
             + "redirect_uri=http://localhost&"
             + "response_type=code&"
-            + "client_id=" + client_id;
+            + "client_id=" + native_app_client_id;
 
     var web_client_id = "982049359064-khobeosb81scm9kt1387mg78o399t71u.apps.googleusercontent.com";
     var authorization_url_web = authorization_base_url + "?"
