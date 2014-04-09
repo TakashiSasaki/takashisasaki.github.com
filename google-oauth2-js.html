@@ -101,7 +101,19 @@
         </h3>
         <a href="#panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
     </header>
-    <div>a</div>
+    <p>テンキーなどの簡単な入力装置しか持たないセットトップボックスなどが
+        Google APIを使うためにOAuth2での認可を受けるには、
+        ブラウザ上で動くJavaScriptアプリのためには<span class="auth_endpoint var"></span>をエンドポイントとしたImplicit Grantを行う。
+        認可コードを得る手順を省略してアクセストークンが得られる。
+        client_secretは要求されないためPublicクライアント扱いである。
+        リフレッシュトークンは得られないので、頻繁に認可が必要となる。
+    </p>
+
+    <p>下のボタンを押すとXmlHttpRequestでデバイスコードとユーザーコードを取得しようとするが、
+        サーバーからのレスポンスヘッダにAccess-Control-Allow-Originが設定されていないため失敗する。</p>
+    <button>デバイスコードとユーザーコードを取得する</button>
+    <input class="device_code">
+    <input class="user_code">
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
@@ -177,27 +189,29 @@
                 var data = window.JSON.parse(
                         $("#post_data_to_exchange_authorization_code_to_access_token").val());
                 try {
-                    $.ajax(
-                            {
-                                type: "post",
-                                url: token_endpoint,
-                                data: data
-                            }
-                    ).
+                    $.ajax({type: "post", url: token_endpoint, data: data}).
                             done(function (e) {
                                 $("#access_token_result").val("done");
                             }).fail(function (jqxhr, textstatus, e) {
                                 $("#access_token_result").val(textstatus);
                             }).always(function (e) {
                             });
-                }
-                catch
-                        (e) {
+                } catch (e) {
                     $("#access_token_result").val(e);
                 }
             }
-    )
-    ;
+    );
+
+    $("#devices button").on("click", function () {
+        var data = {
+            client_id: native_app_client_id,
+            scope: "email profile"
+        }
+        $.ajax({type: "post", url: device_endpoint, data: data, dataType: "json"}).done(function (j) {
+            $("#devices input.device_code").val(j.device_code);
+            $("#devices input.user_code").val(j.user_code);
+        });
+    });
 </script>
 </body>
 </html>
