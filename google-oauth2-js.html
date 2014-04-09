@@ -84,10 +84,11 @@
         alert("access_token = " + window.url("#access_token"));
     }
 
-    var token_url = "https://accounts.google.com/o/oauth2/token";
+    var token_endpoint = "https://accounts.google.com/o/oauth2/token";
+    var auth_endpoint = "https://accounts.google.com/o/oauth2/auth";
     var client_id = "982049359064-m16bre9h586ao9q3hh08hau26v4m7c9i.apps.googleusercontent.com";
     var client_secret = "4fNom33Z_nWujtQaFJzYIxjV";
-    var authorization_url_oob = "https://accounts.google.com/o/oauth2/auth?"
+    var authorization_url_oob = auth_endpoint + "?"
             + "scope=email%20profile&"
             + "state=%2Fprofile&"
             + "redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&"
@@ -123,7 +124,7 @@
                     $.ajax(
                             {
                                 type: "post",
-                                url: token_url,
+                                url: token_endpoint,
                                 data: {
                                     client_id: client_id,
                                     client_secret: client_secret,
