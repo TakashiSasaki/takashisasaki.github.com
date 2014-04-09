@@ -1,47 +1,53 @@
 .ui-icon-gmail:after {
-  background-image: url("https://www.google.com/support/enterprise/static/gapps/art/common/en/mail_35.gif");
-  background-color: transparent;
-  background-size: contain;
+    background-image: url("https://www.google.com/support/enterprise/static/gapps/art/common/en/mail_35.gif");
+    background-color: transparent;
+    background-size: contain;
 }
 
 .ui-icon-keep:after {
-  background-image: url("https://lh4.googleusercontent.com/NGuqU_xsW_ycybNbhvT6Z6UVYerioEVmFXkNBHEgAkBph4uwfM9be3KySb99tY9OEWadN7vZ=s50-h50-e365");
-  background-color: transparent;
-  background-size: contain;
+    background-image: url("https://lh4.googleusercontent.com/NGuqU_xsW_ycybNbhvT6Z6UVYerioEVmFXkNBHEgAkBph4uwfM9be3KySb99tY9OEWadN7vZ=s50-h50-e365");
+    background-color: transparent;
+    background-size: contain;
 }
 
 .ui-icon-oauth:after {
-  background-image: url("https://developers.google.com/oauthplayground/assets/images/oauth-2-sm.png");
-  background-color: transparent;
-  background-size: contain;
+    background-image: url("https://developers.google.com/oauthplayground/assets/images/oauth-2-sm.png");
+    background-color: transparent;
+    background-size: contain;
 }
 
 .ui-icon-twitter:after {
-  background-image: url("https://pbs.twimg.com/profile_images/1837373378/twitter1.png");
-  background-color: transparent;
-  background-size: contain;
+    background-image: url("https://pbs.twimg.com/profile_images/1837373378/twitter1.png");
+    background-color: transparent;
+    background-size: contain;
 }
 
 .ui-icon-picasaweb:after {
-  background-image: url("https://lh5.googleusercontent.com/-kbhBHRi1GDg/Uc-PmiP_y0I/AAAAAAAAGpg/dZJyg-LSUhM/");
-  background-color: transparent;
-  background-size: contain;
+    background-image: url("https://lh5.googleusercontent.com/-kbhBHRi1GDg/Uc-PmiP_y0I/AAAAAAAAGpg/dZJyg-LSUhM/");
+    background-color: transparent;
+    background-size: contain;
 }
 
 .ui-icon-google-photo:after {
-  background-image: url("http://www.iboostup.com/resource?a=r&t=thumbnail&i=com.google.gpautobackup");
-  background-color: transparent;
-  background-size: contain;
+    background-image: url("http://www.iboostup.com/resource?a=r&t=thumbnail&i=com.google.gpautobackup");
+    background-color: transparent;
+    background-size: contain;
 }
 
 .ui-icon-google-calendar:after {
-  background-image: url("http://upload.wikimedia.org/wikipedia/commons/e/e9/Google_Calendar.png");
-  background-color: transparent;
-  background-size: contain;
+    background-image: url("http://upload.wikimedia.org/wikipedia/commons/e/e9/Google_Calendar.png");
+    background-color: transparent;
+    background-size: contain;
 }
 
 .ui-icon-google-yahoo:after {
-  background-image: url("http://www.banabana.net/img-top/yahoo-icon.png");
-  background-color: transparent;
-  background-size: contain;
+    background-image: url("http://www.banabana.net/img-top/yahoo-icon.png");
+    background-color: transparent;
+    background-size: contain;
+}
+
+SPAN.var {
+    font-style: italic;
+    font-style: oblique;
+    background: lightcyan;
 }
