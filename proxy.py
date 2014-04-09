@@ -16,24 +16,60 @@ def do_GET(self):
     self.send_header("Content-Type", "text/html")
     self.end_headers()
     page = """
-    <html>
-    <head></head>
-    <body><form action="/proxy" method="POST">
-    <textarea name="ajax_option" cols="60" rows="10">
-        {
-            "type": "get",
-            "url":"http://www.yahoo.co.jp/index.html?a=b#c=d",
-            "data": {
-                "param1":"value1",
-                "param2":"value2"
+    <html><head></head><body>
+    <form action="/proxy" method="POST">
+        <textarea name="ajax_option" cols="60" rows="10">
+            {
+                "type": "get",
+                "url":"http://www.yahoo.co.jp/?a=b#c=d",
+                "data": {
+                    "param1":"value1",
+                    "param2":"value2"
+                }
             }
-        }
-    </textarea>
-    <button type="submit">submit</button>
+        </textarea>
+        <button type="submit">submit</button>
     </form>
-    <script></script>
-    </body>
-    </html>
+    <form action="/proxy" method="POST">
+        <textarea name="ajax_option" cols="60" rows="10">
+            {
+                "type": "get",
+                "url":"https://www.yahoo.com/?a=b#c=d",
+                "data": {
+                    "param1":"value1",
+                    "param2":"value2"
+                }
+            }
+        </textarea>
+        <button type="submit">submit</button>
+    </form>
+    <form action="/proxy" method="POST">
+        <textarea name="ajax_option" cols="60" rows="10">
+            {
+                "type": "post",
+                "url":"http://www.yahoo.co.jp/?a=b#c=d",
+                "data": {
+                    "param1":"value1",
+                    "param2":"value2"
+                }
+            }
+        </textarea>
+        <button type="submit">submit</button>
+    </form>
+    <form action="/proxy" method="POST">
+        <textarea name="ajax_option" cols="60" rows="10">
+            {
+                "type": "post",
+                "url":"https://www.yahoo.com/?a=b#c=d",
+                "data": {
+                    "param1":"value1",
+                    "param2":"value2"
+                }
+            }
+        </textarea>
+        <button type="submit">submit</button>
+    </form>
+    </body></html>
     """
     self.wfile.write(bytes(page, "UTF-8"))
 
@@ -78,7 +114,7 @@ def proxy_post(self, ajax_option):
         if port is None:
             port = 443
         context = ssl.create_default_context()
-        http_connection = http.client.HTTPConnection(netloc, port, context=context)
+        http_connection = http.client.HTTPSConnection(netloc, port, context=context)
 
     query_from_url = cgi.parse_qs(query)
     for k in query_from_url.keys():
