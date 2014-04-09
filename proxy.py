@@ -1,5 +1,7 @@
 __author__ = 'Takashi SASAKI'
 import http.server
+import logging
+import cgi
 
 
 def do_GET(self):
@@ -12,7 +14,7 @@ def do_GET(self):
     <head></head>
     <body><form action="/proxy" method="POST">
 
-    <textarea placeholder="{}" cols="60" rows="10"></textarea>
+    <textarea name="ajax" placeholder="{}" cols="60" rows="10"></textarea>
     <button type="submit">submit</button>
     </form>
     <script></script>
@@ -27,4 +29,11 @@ def do_POST(self):
     self.send_response(200)
     self.send_header("Content-Type", "text/plain")
     self.end_headers()
-    self.wfile.write(bytes("proxy.py", "UTF-8"))
+    #self.wfile.write(bytes("proxy.py", "UTF-8"))
+    body_len = int(self.headers['Content-Length'])
+    logging.info(body_len)
+    logging.info(self.headers["Content-Type"])
+    body = self.rfile.read(body_len)
+    decoded_body = cgi.parse_qs(body)
+    logging.info(decoded_body)
+    self.wfile.write(decoded_body[b"ajax"][0])
