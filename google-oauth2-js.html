@@ -89,7 +89,8 @@
         </div>
         <div class="ui-body ui-body-a">
             <a class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">アクセストークンを取得</a>
-            <input readonly="true">
+            <input readonly="true" class="url">
+            <input readonly="true" class="token">
         </div>
     </div>
 </div>
@@ -111,7 +112,12 @@
             window.url("port") + window.url("path");
 
     if (window.url("#access_token") != null) {
-        alert("access_token = " + window.url("#access_token"));
+        if (window.url("#state") == "client-side") {
+            $("#client-side input.token").val(window.url("#access_token"));
+            setTimeout(function () {
+                $(':mobile-pagecontainer').pagecontainer("change", "#client-side", {transition: 'flip', changeHash: false});
+            }, 2000);
+        }
     }
 
     var token_endpoint = "https://accounts.google.com/o/oauth2/token";
@@ -143,14 +149,15 @@
             + "scope=email%20profile&"
             + "redirect_uri=" + encodeURIComponent(base_url) + "&"
             + "response_type=token&"
-            + "client_id=" + web_app_client_id;
+            + "client_id=" + web_app_client_id + "&"
+            + "state=client-side";
 
 
     $(document).on("pagecreate", function (e, ui) {
         $("#authorization_url_oob").attr("href", authorization_url_oob);
         $("#authorization_url_localhost").attr("href", authorization_url_localhost);
-        $("#client-side a").attr("href", authorization_url_web);
-        $("#client-side input").val(authorization_url_web);
+        $("#client-side div a").attr("href", authorization_url_web);
+        $("#client-side input.url").val(authorization_url_web);
     });
 
     $("#authorization_code").on("change",
