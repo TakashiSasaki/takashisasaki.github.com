@@ -1,10 +1,11 @@
 __author__ = 'sasaki'
 import logging
-import http.server
+#import http.server
+import main
 
 
 def do_GET(self):
-    assert isinstance(self, http.server.BaseHTTPRequestHandler)
+    assert isinstance(self, main.MyHttpRequestHandler)
     logging.info("handler1.py")
     self.send_response(200)
     self.send_header("Content-Type", "text/plain")
