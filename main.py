@@ -15,6 +15,15 @@ class MyHttpRequestHandler(http.server.BaseHTTPRequestHandler):
         http.server.BaseHTTPRequestHandler.__init__(self, request, client_address, server)
 
     def do_GET(self):
+        path_list = self.path.split('/')[1:]
+        try:
+            if (len(path_list) == 1):
+                module = __import__(path_list[0], globals=globals(), locals=locals())
+                module.do_GET(self)
+                return
+        except ImportError as e:
+            pass
+
         self.send_response(200)
         self.send_header("Content-Type", "text/plain")
         self.end_headers()
