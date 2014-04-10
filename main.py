@@ -47,9 +47,11 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                     module.do_GET(self)
                     return
         except ImportError as e:
-            pass
+            http.server.SimpleHTTPRequestHandler.do_GET(self)
+            return
         except ValueError as e:
-            pass
+            http.server.SimpleHTTPRequestHandler.do_GET(self)
+            return
 
 
         #data = {"server_id": "2T6CnTUUcqkY"}
