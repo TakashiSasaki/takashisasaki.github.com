@@ -44,7 +44,9 @@ class MyHttpRequestHandler(http.server.BaseHTTPRequestHandler):
         except ValueError as e:
             pass
 
-        data = {"server_id": "2T6CnTUUcqkY"}
+
+        #data = {"server_id": "2T6CnTUUcqkY"}
+        data = self.parsedQuery
         if self.parsedQuery.get("callback") is not None:
             self.send_response(200)
             self.send_header("Content-Type", "application/javascript")
