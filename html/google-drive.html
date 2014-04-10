@@ -24,6 +24,7 @@
         </div>
         <button class="ui-btn auth">認証を得る</button>
         <button class="ui-btn list">ファイルの一覧を得る</button>
+        <div id="file-list-table"></div>
     </div>
 
     <div data-role="footer">
@@ -32,6 +33,7 @@
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<script src='https://www.google.com/jsapi'></script>
 <script src="http://url.websanova.com/url.min.js"></script>
 <script src="../panel.js"></script>
 <script>
@@ -45,8 +47,10 @@
     ];
     function handleClientLoad() {
         gapi.client.load('drive', 'v2');
+        google.load('visualization', '1', {packages: ['table', 'corechart'], callback: function () {
+                }}
+        );
         var access_token = localStorage.getItem("access_token");
-        alert(access_token);
         if (access_token) {
             gapi.auth.setToken(access_token);
         }
@@ -61,9 +65,15 @@
                     var request = gapi.client.drive.files.list();
                     request.execute(function (resp) {
                         items = resp.items;
-                        items.forEach(function (x) {
-                            alert(x.title);
-                        });
+                        var data = new google.visualization.DataTable();
+                        data.addColumn("string", "title");
+                        if (items) {
+                            items.forEach(function (x) {
+                                data.addRow([x.title]);
+                            });
+                        }
+                        var table = new google.visualization.Table(document.getElementById("file-list-table"));
+                        table.draw(data, {showRowNumber: true});
                     });
                 }
         )
