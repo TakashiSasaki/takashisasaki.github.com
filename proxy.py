@@ -134,18 +134,32 @@ def proxy_post(self, ajax_options):
     if ajax_options.get("type") in ["POST", "post"]:
         if len(query_from_url) > 0:
             url = path + "?" + urllib.parse.urlencode(query_from_url)
-            body = urllib.parse.urlencode(query_from_ajax_options)
-            http_connection.request("POST", url, body)
+            body_to_post = urllib.parse.urlencode(query_from_ajax_options)
+            logging.info("body_to_post=%s" % body_to_post)
+            http_connection.request("POST", url, body_to_post)
         else:
-            body = urllib.parse.urlencode(query_from_ajax_options)
-            http_connection.request("POST", path, body)
+            body_to_post_encoded = urllib.parse.urlencode(query_from_ajax_options)
+            #logging.info(body_to_post_encoded)
+            #body_to_post_unquoted = urllib.parse.unquote(body_to_post_encoded)
+            #logging.info(body_to_post_encoded)
+            http_connection.request("POST", path, body_to_post_encoded,
+                                    {"Content-type": "application/x-www-form-urlencoded"})
 
     http_response = http_connection.getresponse()
     assert isinstance(http_response, http.client.HTTPResponse)
-    logging.info("status = %s" % http_response.status)
-    #self.send_response(http_response.status)
-    self.send_response(http_response.status)
+    status = http_response.status
+    reason = http_response.reason
+    reason = 200
+    body = http_response.read()
+    self.send_response(status, reason)
+    #self.send_header("Content-Length", len(body)
     for k in http_response.headers:
+        if k == "Alternate-Protocol": continue
+        if k == "Date": continue
+        if k == "Server": continue
+        if k == "Transfer-Encoding": continue
+        logging.info(k + ":" + http_response.getheader(k))
         self.send_header(k, http_response.getheader(k))
     self.end_headers()
-    self.wfile.write(http_response.read())
+    logging.info(body)
+    self.wfile.write(body)

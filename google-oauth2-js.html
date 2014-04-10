@@ -69,7 +69,7 @@
                 <form method="post" action="http://localhost/proxy">
                     <textarea placeholder="AJAXプロキシにPOSTするデータがここに表示されます" readonly="true"
                               class="ajax_options" rows="5" name="ajax_options"></textarea>
-                    <button class="ajax_options">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
+                    <button class="ajax_options" type="submit">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
                 </form>
             </div>
         </div>
@@ -183,7 +183,7 @@
                     client_secret: native_app_client_secret,
                     grant_type: "authorization_code",
                     code: $("#authorization_code").val(),
-                    redirect_uri: "http://localhost"
+                    redirect_uri: "urn:ietf:wg:oauth:2.0:oob"
                 }
                 $("#installed-apps TEXTAREA.ajax_data").val(window.JSON.stringify(data));
                 $("#installed-apps TEXTAREA.ajax_data").keyup();

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/google-oauth2-js.html" afterPath="$PROJECT_DIR$/google-oauth2-js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy.py" afterPath="$PROJECT_DIR$/proxy.py" />
     </list>
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/takashisasaki.github.com$main.coverage" NAME="main Coverage Results" MODIFIED="1397104620099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/takashisasaki.github.com$main.coverage" NAME="main Coverage Results" MODIFIED="1397108141700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -37,11 +38,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="18" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.34195402" vertical-offset="255" max-vertical-offset="1428">
-              <folding />
+            <state line="28" column="17" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1428">
+              <folding>
+                <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
+                <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,16 +62,16 @@
       <file leaf-file-name="proxy.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proxy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="45" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2516">
+            <state line="145" column="88" selection-start="4997" selection-end="4997" vertical-scroll-proportion="0.0" vertical-offset="2058" max-vertical-offset="2754">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="google-oauth2-js.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="google-oauth2-js.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="221" column="11" selection-start="9797" selection-end="9797" vertical-scroll-proportion="-20.038462" vertical-offset="3236" max-vertical-offset="3944">
+            <state line="176" column="7" selection-start="7809" selection-end="7809" vertical-scroll-proportion="0.38812786" vertical-offset="2737" max-vertical-offset="3944">
               <folding />
             </state>
           </provider>
@@ -106,15 +110,15 @@
       <list>
         <option value="C:/Python34/Lib/socketserver.py" />
         <option value="$PROJECT_DIR$/handler1.py" />
-        <option value="$PROJECT_DIR$/google-oauth2-js.html" />
-        <option value="$PROJECT_DIR$/proxy.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/proxy.py" />
+        <option value="$PROJECT_DIR$/google-oauth2-js.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="359" />
-    <option name="y" value="103" />
+    <option name="x" value="167" />
+    <option name="y" value="116" />
     <option name="width" value="1001" />
     <option name="height" value="1086" />
   </component>
@@ -371,7 +375,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="359" y="103" width="1001" height="1086" extended-state="0" />
+    <frame x="167" y="116" width="1001" height="1086" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -412,7 +416,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="53" />
+      <option name="time" value="61" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -426,7 +430,10 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1207">
-          <folding />
+          <folding>
+            <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
+            <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -475,7 +482,10 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1207">
-          <folding />
+          <folding>
+            <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
+            <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -517,7 +527,10 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1207">
-          <folding />
+          <folding>
+            <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
+            <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -556,30 +569,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python34/Lib/socketserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="670" column="0" selection-start="21608" selection-end="21608" vertical-scroll-proportion="0.0" vertical-offset="11152" max-vertical-offset="12767">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/handler1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="14" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="11" selection-start="9797" selection-end="9797" vertical-scroll-proportion="-20.038462" vertical-offset="3236" max-vertical-offset="3944">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="45" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2516">
           <folding />
         </state>
       </provider>
@@ -591,6 +583,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="17" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1428">
+          <folding>
+            <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
+            <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://C:/Python34/Lib/http/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="314" column="0" selection-start="11390" selection-end="11390" vertical-scroll-proportion="0.0" vertical-offset="4709" max-vertical-offset="20774">
@@ -598,9 +600,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://C:/Python34/Lib/socketserver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="18" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.34195402" vertical-offset="255" max-vertical-offset="1428">
+        <state line="670" column="0" selection-start="21608" selection-end="21608" vertical-scroll-proportion="0.0" vertical-offset="11152" max-vertical-offset="12767">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="88" selection-start="4997" selection-end="4997" vertical-scroll-proportion="0.0" vertical-offset="2058" max-vertical-offset="2754">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="7" selection-start="7809" selection-end="7809" vertical-scroll-proportion="0.38812786" vertical-offset="2737" max-vertical-offset="3944">
           <folding />
         </state>
       </provider>
