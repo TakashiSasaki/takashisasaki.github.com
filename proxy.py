@@ -76,9 +76,9 @@ def do_GET(self):
 
 def do_POST(self):
     assert isinstance(self, http.server.BaseHTTPRequestHandler)
-    self.send_response(200)
-    self.send_header("Content-Type", "text/plain")
-    self.end_headers()
+    #self.send_response(200)
+    #self.send_header("Content-Type", "text/plain")
+    #self.end_headers()
     #self.wfile.write(bytes("proxy.py", "UTF-8"))
     body_len = int(self.headers['Content-Length'])
     logging.info(body_len)
@@ -90,7 +90,7 @@ def do_POST(self):
     logging.info(json_string)
     decoded_json = json.loads(json_string)
     proxy_post(self, decoded_json)
-    self.wfile.write(bytes(decoded_json["url"], "UTF-8"))
+    #self.wfile.write(bytes(decoded_json["url"], "UTF-8"))
 
 
 def proxy_post(self, ajax_options):
@@ -141,4 +141,11 @@ def proxy_post(self, ajax_options):
             http_connection.request("POST", path, body)
 
     http_response = http_connection.getresponse()
+    assert isinstance(http_response, http.client.HTTPResponse)
     logging.info("status = %s" % http_response.status)
+    #self.send_response(http_response.status)
+    self.send_response(http_response.status)
+    for k in http_response.headers:
+        self.send_header(k, http_response.getheader(k))
+    self.end_headers()
+    self.wfile.write(http_response.read())
