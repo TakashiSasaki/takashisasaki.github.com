@@ -8,6 +8,7 @@ $(document).one("pagebeforecreate", function (e, ui) {
     panel += '<li><a href="google-oauth2-js.html#client-side">OAuth2 for Client-side</a></li>';
     panel += '<li><a href="google-oauth2-js.html#devices">OAuth2 for Devices</a></li>';
     panel += '</ul>';
+    panel += '<div id="script-buffer"></div>';
     panel += "";
     //$.mobile.pageContainer.append(panel);
     //$.mobile.pageContainer.prepend(panel);
@@ -15,4 +16,14 @@ $(document).one("pagebeforecreate", function (e, ui) {
     //$("body").append(panel);
     $("#panel").panel();
     $("#panel ul").listview();
+
+    localhostPingCallback();
 });
+
+function localhostPingCallback(e) {
+    setTimeout(function () {
+        $("#script-buffer").empty();
+        $("#script-buffer").append('<script src="http://localhost/?callback=localhostPingCallback"></script><div><p>localhost最終確認</p><p>' + $.timeago(new Date()) + '</p></div>');
+        $("#panel").panel();
+    }, 10000);
+}
