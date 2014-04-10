@@ -63,10 +63,14 @@
                     サーバーからのレスポンスを拒否するので何も起こらない。</p>
                 <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code">
                 <textarea placeholder="POSTすべきデータがここに表示されます" readonly="true"
-                          id="post_data_to_exchange_authorization_code_to_access_token"></textarea>
+                          id="post_data_to_exchange_authorization_code_to_access_token" rows="4"
+                          class="ajax_data"></textarea>
                 <button id="access_token_link" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">
-                    認可コードをアクセストークンへ交換
+                    XmlHttpRequestで認可コードをアクセストークンへ交換（失敗します）
                 </button>
+                <textarea placeholder="AJAXプロキシにPOSTするデータがここに表示されます" readonly="true"
+                          class="ajax_proxy" rows="5"></textarea>
+                <button class="ajax_proxy">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
             </div>
         </div>
     </div>
@@ -172,7 +176,7 @@
         $("#client-side input.url").val(authorization_url_web);
     });
 
-    $("#authorization_code").on("change",
+    $("#authorization_code").on("keyup",
             function () {
                 var data = {
                     client_id: native_app_client_id,
@@ -181,13 +185,14 @@
                     code: $("#authorization_code").val(),
                     redirect_uri: "http://localhost"
                 }
-                $("#post_data_to_exchange_authorization_code_to_access_token").val(window.JSON.stringify(data));
+                $("#installed-apps TEXTAREA.ajax_data").val(window.JSON.stringify(data));
+                $("#installed-apps TEXTAREA.ajax_data").keyup();
             }
     );
 
     $("#access_token_link").on("click", function () {
                 var data = window.JSON.parse(
-                        $("#post_data_to_exchange_authorization_code_to_access_token").val());
+                        $("#installed-apps TEXTAREA.ajax_data").val());
                 try {
                     $.ajax({type: "post", url: token_endpoint, data: data}).
                             done(function (e) {
