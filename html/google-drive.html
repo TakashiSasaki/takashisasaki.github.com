@@ -37,6 +37,7 @@
     var CLIENT_ID = "982049359064-khobeosb81scm9kt1387mg78o399t71u.apps.googleusercontent.com";
     var SCOPES = [
         'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/drive',
         'https://www.googleapis.com/auth/userinfo.email',
         'https://www.googleapis.com/auth/userinfo.profile',
         // Add other scopes needed by your application.
@@ -45,11 +46,13 @@
         $("#page-google-drive-demo BUTTON").on("click",
                 function () {
                     gapi.auth.authorize({client_id: CLIENT_ID, scope: SCOPES.join(' '), immediate: false}, handleAuthResult);
+                    gapi.client.load('drive', 'v2', function () {
+                    });
                     return false;
                 }
         );
     }
-    function handleAuthResult(authResult) {
+    function handleAuthResult(oauth2_token_object) {
     }
 
     // Load the API and make an API call.  Display the results on the screen.
