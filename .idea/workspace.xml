@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/google-oauth2-js.html" afterPath="$PROJECT_DIR$/google-oauth2-js.html" />
-    </list>
+    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="" />
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,7 +67,7 @@
       <file leaf-file-name="google-oauth2-js.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="69" selection-start="8759" selection-end="8759" vertical-scroll-proportion="0.53881276" vertical-offset="2995" max-vertical-offset="3842">
+            <state line="191" column="45" selection-start="8399" selection-end="8399" vertical-scroll-proportion="0.38356164" vertical-offset="2995" max-vertical-offset="3842">
               <folding />
             </state>
           </provider>
@@ -559,7 +557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="69" selection-start="8759" selection-end="8759" vertical-scroll-proportion="0.53881276" vertical-offset="2995" max-vertical-offset="3842">
+        <state line="191" column="45" selection-start="8399" selection-end="8399" vertical-scroll-proportion="0.38356164" vertical-offset="2995" max-vertical-offset="3842">
           <folding />
         </state>
       </provider>
