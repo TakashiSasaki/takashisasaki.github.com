@@ -66,9 +66,11 @@
                 <button class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline ajax_data">
                     XmlHttpRequestで認可コードをアクセストークンへ交換（失敗します）
                 </button>
-                <textarea placeholder="AJAXプロキシにPOSTするデータがここに表示されます" readonly="true"
-                          class="ajax_options" rows="5"></textarea>
-                <button class="ajax_options">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
+                <form method="post" action="http://localhost/proxy">
+                    <textarea placeholder="AJAXプロキシにPOSTするデータがここに表示されます" readonly="true"
+                              class="ajax_options" rows="5" name="ajax_options"></textarea>
+                    <button class="ajax_options">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
+                </form>
             </div>
         </div>
     </div>

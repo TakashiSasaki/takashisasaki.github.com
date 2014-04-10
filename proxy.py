@@ -18,7 +18,7 @@ def do_GET(self):
     page = """
     <html><head></head><body>
     <form action="/proxy" method="POST">
-        <textarea name="ajax_option" cols="60" rows="10">
+        <textarea name="ajax_options" cols="60" rows="10">
             {
                 "type": "get",
                 "url":"http://www.yahoo.co.jp/?a=b#c=d",
@@ -31,7 +31,7 @@ def do_GET(self):
         <button type="submit">submit</button>
     </form>
     <form action="/proxy" method="POST">
-        <textarea name="ajax_option" cols="60" rows="10">
+        <textarea name="ajax_options" cols="60" rows="10">
             {
                 "type": "get",
                 "url":"https://www.yahoo.com/?a=b#c=d",
@@ -44,7 +44,7 @@ def do_GET(self):
         <button type="submit">submit</button>
     </form>
     <form action="/proxy" method="POST">
-        <textarea name="ajax_option" cols="60" rows="10">
+        <textarea name="ajax_options" cols="60" rows="10">
             {
                 "type": "post",
                 "url":"http://www.yahoo.co.jp/?a=b#c=d",
@@ -57,7 +57,7 @@ def do_GET(self):
         <button type="submit">submit</button>
     </form>
     <form action="/proxy" method="POST">
-        <textarea name="ajax_option" cols="60" rows="10">
+        <textarea name="ajax_options" cols="60" rows="10">
             {
                 "type": "post",
                 "url":"https://www.yahoo.com/?a=b#c=d",
@@ -85,7 +85,7 @@ def do_POST(self):
     logging.info(self.headers["Content-Type"])
     body = self.rfile.read(body_len)
     decoded_body = cgi.parse_qs(body)
-    json_bytes = decoded_body[b"ajax_option"][0]
+    json_bytes = decoded_body.get(b"ajax_options")[0]
     json_string = json_bytes.decode("UTF-8")
     logging.info(json_string)
     decoded_json = json.loads(json_string)
@@ -93,8 +93,8 @@ def do_POST(self):
     self.wfile.write(bytes(decoded_json["url"], "UTF-8"))
 
 
-def proxy_post(self, ajax_option):
-    parsed_url = urllib.parse.urlparse(ajax_option["url"])
+def proxy_post(self, ajax_options):
+    parsed_url = urllib.parse.urlparse(ajax_options["url"])
     scheme = parsed_url.scheme
     netloc = parsed_url.netloc
     path = parsed_url.path
@@ -119,25 +119,25 @@ def proxy_post(self, ajax_option):
     query_from_url = cgi.parse_qs(query)
     for k in query_from_url.keys():
         query_from_url[k] = query_from_url[k][0]
-    query_from_ajax_option = ajax_option.get("data")
+    query_from_ajax_options = ajax_options.get("data")
     query_merged = {}
     query_merged.update(query_from_url)
-    query_merged.update(query_from_ajax_option)
+    query_merged.update(query_from_ajax_options)
 
-    if ajax_option.get("type") in ["GET", "get"]:
+    if ajax_options.get("type") in ["GET", "get"]:
         if len(query_merged) > 0:
             url = path + "?" + urllib.parse.urlencode(query_merged)
             http_connection.request("GET", url)
         else:
             http_connection.request("GET", path)
 
-    if ajax_option.get("type") in ["POST", "post"]:
+    if ajax_options.get("type") in ["POST", "post"]:
         if len(query_from_url) > 0:
             url = path + "?" + urllib.parse.urlencode(query_from_url)
-            body = urllib.parse.urlencode(query_from_ajax_option)
+            body = urllib.parse.urlencode(query_from_ajax_options)
             http_connection.request("POST", url, body)
         else:
-            body = urllib.parse.urlencode(query_from_ajax_option)
+            body = urllib.parse.urlencode(query_from_ajax_options)
             http_connection.request("POST", path, body)
 
     http_response = http_connection.getresponse()
