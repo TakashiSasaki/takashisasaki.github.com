@@ -45,25 +45,21 @@
     function handleClientLoad() {
         $("#page-google-drive-demo BUTTON").on("click",
                 function () {
-                    gapi.auth.authorize({client_id: CLIENT_ID, scope: SCOPES.join(' '), immediate: false}, handleAuthResult);
-                    gapi.client.load('drive', 'v2', function () {
-                        var initial_request = gapi.client.drive.files.list();
-                        initial_request.execute(function (r) {
-                            for (var p in r) {
-                                alert(p);
-                            }
-                            var a = new Array();
-                            alert(r.items);
-                            alert(r.items.length);
-                        });
-                    });
+                    authenticate();
                     return false;
                 }
         );
     }
-    function handleAuthResult(oauth2_token_object) {
+    function authenticate() {
+        localStorage.removeItem("gapi_oauth2_token");
+        gapi.auth.authorize({client_id: CLIENT_ID, scope: SCOPES.join(' '), immediate: false},
+                function () {
+                    var gapi_oauth2_token = gapi.auth.getToken();
+                    localStorage.setItem("access_token", gapi_oauth2_token.access_token);
+                    gapi.client.load('drive', 'v2');
+                }
+        );
     }
-
 
 </script>
 <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
