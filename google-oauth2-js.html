@@ -62,10 +62,8 @@
                     下のボタンをクリックするとXmlHttpRequestが実行されるが、
                     サーバーからのレスポンスを拒否するので何も起こらない。</p>
                 <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code">
-                <textarea placeholder="POSTすべきデータがここに表示されます" readonly="true"
-                          id="post_data_to_exchange_authorization_code_to_access_token" rows="4"
-                          class="ajax_data"></textarea>
-                <button id="access_token_link" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">
+                <textarea placeholder="POSTすべきデータがここに表示されます" readonly="true" class="ajax_data"></textarea>
+                <button class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline ajax_data">
                     XmlHttpRequestで認可コードをアクセストークンへ交換（失敗します）
                 </button>
                 <textarea placeholder="AJAXプロキシにPOSTするデータがここに表示されます" readonly="true"
@@ -190,7 +188,7 @@
             }
     );
 
-    $("#access_token_link").on("click", function () {
+    $("#installed-apps BUTTON.ajax_data").on("click", function () {
                 var data = window.JSON.parse(
                         $("#installed-apps TEXTAREA.ajax_data").val());
                 try {
