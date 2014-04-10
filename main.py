@@ -12,7 +12,7 @@ class MyHttpServer(http.server.HTTPServer):
         http.server.HTTPServer.__init__(self, server_address, handler_class)
 
 
-class MyHttpRequestHandler(http.server.BaseHTTPRequestHandler):
+class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     __slot__ = ["pathList", "parsedUrl", "parsedQuery"]
 
     def __init__(self, request, client_address, server):
