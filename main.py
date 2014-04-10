@@ -30,6 +30,13 @@ class MyHttpRequestHandler(http.server.BaseHTTPRequestHandler):
         logging.info(self.parsedUrl)
         logging.info(self.parsedQuery)
 
+        if (len(self.pathList) == 0):
+            self.responseIndexHtml()
+            return
+        if (self.pathList[0] == ""):
+            self.responseIndexHtml()
+            return
+
         try:
             if (len(self.pathList) == 1):
                 module = __import__(self.pathList[0], globals=globals(), locals=locals())
@@ -58,6 +65,13 @@ class MyHttpRequestHandler(http.server.BaseHTTPRequestHandler):
             self.send_header("Content-Type", "text/json")
             self.end_headers()
             self.wfile.write(bytes(json.dumps(data), "UTF-8"))
+
+    def responseIndexHtml(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html")
+        file = open("index.html", encoding='utf-8')
+        body = file.read()
+        self.wfile.write(bytes(body, "UTF-8"))
 
 
 if __name__ == "__main__":
