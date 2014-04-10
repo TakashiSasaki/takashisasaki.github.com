@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css"/>
+    <link rel="stylesheet" href="../icon.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<div data-role='panel' id='panel' data-display="overlay" data-theme="b"></div>
+
+<div data-role="page" id="page-google-drive-demo">
+    <header data-role="header" data-position="fixed">
+        <a href="#panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+
+        <h1>takashisasaki.github.io</h1>
+    </header>
+    <div class="ui-content" role="main">
+        <div>Google APIs Client Library for JavaScriptを使うデモ。
+            はじめにライブラリ全体に渡って有効な認証を得る。
+            別のウィンドウが開いて、認証および認可を求められる。
+            一度認可すると別のウィンドウが開いてもすぐに閉じる。
+        </div>
+        <button class="ui-btn">認証を得る</button>
+    </div>
+
+    <div data-role="footer">
+        <h3></h3>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<script src="http://url.websanova.com/url.min.js"></script>
+<script src="../panel.js"></script>
+<script>
+    var CLIENT_ID = "982049359064-khobeosb81scm9kt1387mg78o399t71u.apps.googleusercontent.com";
+    var SCOPES = [
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/userinfo.email',
+        'https://www.googleapis.com/auth/userinfo.profile',
+        // Add other scopes needed by your application.
+    ];
+    function handleClientLoad() {
+        $("#page-google-drive-demo BUTTON").on("click",
+                function () {
+                    gapi.auth.authorize({client_id: CLIENT_ID, scope: SCOPES.join(' '), immediate: false}, handleAuthResult);
+                    return false;
+                }
+        );
+    }
+    function handleAuthResult(authResult) {
+    }
+
+    // Load the API and make an API call.  Display the results on the screen.
+    function makeApiCall() {
+        // Step 4: Load the Google+ API
+        gapi.client.load('plus', 'v1', function () {
+            // Step 5: Assemble the API request
+            var request = gapi.client.plus.people.get({
+                'userId': 'me'
+            });
+            // Step 6: Execute the API request
+            request.execute(function (resp) {
+                var heading = document.createElement('h4');
+                var image = document.createElement('img');
+                image.src = resp.image.url;
+                heading.appendChild(image);
+                heading.appendChild(document.createTextNode(resp.displayName));
+
+                document.getElementById('content').appendChild(heading);
+            });
+        });
+    }
+
+</script>
+<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+</body>
+</html>

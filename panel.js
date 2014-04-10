@@ -7,6 +7,7 @@ $(document).one("pagebeforecreate", function (e, ui) {
     panel += '<li><a href="google-oauth2-js.html#installed-apps">OAuth2 for Installed Apps</a></li>';
     panel += '<li><a href="google-oauth2-js.html#client-side">OAuth2 for Client-side</a></li>';
     panel += '<li><a href="google-oauth2-js.html#devices">OAuth2 for Devices</a></li>';
+    panel += '<li><a href="html/google-drive.html#google-drive-api-demo">Google Drive API Demo</a></li>';
     panel += '</ul>';
     panel += "";
     //$.mobile.pageContainer.append(panel);
