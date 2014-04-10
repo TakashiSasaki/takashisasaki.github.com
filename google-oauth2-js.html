@@ -40,7 +40,7 @@
                     レスポンスタイプとしてcodeを指定し認可のためのサーバを呼び出す。
                     OOBとはユーザーが認可コードをコピーアンドペーストなどの方法で取り扱う必要があることを意味する。
                     認可サーバ上のページに認可コードが表示される。</p>
-                <a id="authorization_url_oob" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline"
+                <a class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline oob"
                    target="_blank">
                     リダイレクト先をOOBとして認可コードを取得する</a>
 
@@ -49,7 +49,7 @@
                     そうでない場合は単に空白かlocalhostに接続できない旨を表示するブラウザからのエラーを
                     示すページが表示されるだろう。
                 </p>
-                <a id="authorization_url_localhost" class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline"
+                <a class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline localhost"
                    target="_blank">
                     リダイレクト先をlocalhostとして認可コードを取得する</a>
             </div>
@@ -67,8 +67,8 @@
                     XmlHttpRequestで認可コードをアクセストークンへ交換（失敗します）
                 </button>
                 <textarea placeholder="AJAXプロキシにPOSTするデータがここに表示されます" readonly="true"
-                          class="ajax_proxy" rows="5"></textarea>
-                <button class="ajax_proxy">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
+                          class="ajax_options" rows="5"></textarea>
+                <button class="ajax_options">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
             </div>
         </div>
     </div>
@@ -168,8 +168,8 @@
 
 
     $(document).on("pagecreate", function (e, ui) {
-        $("#authorization_url_oob").attr("href", authorization_url_oob);
-        $("#authorization_url_localhost").attr("href", authorization_url_localhost);
+        $("#installed-apps A.oob").attr("href", authorization_url_oob);
+        $("#installed-apps A.localhost").attr("href", authorization_url_localhost);
         $("#client-side div a").attr("href", authorization_url_web);
         $("#client-side input.url").val(authorization_url_web);
     });
@@ -185,14 +185,18 @@
                 }
                 $("#installed-apps TEXTAREA.ajax_data").val(window.JSON.stringify(data));
                 $("#installed-apps TEXTAREA.ajax_data").keyup();
+                var ajax_option = {type: "post", url: token_endpoint, data: data};
+                $("#installed-apps TEXTAREA.ajax_options").val(window.JSON.stringify(ajax_option));
+                $("#installed-apps TEXTAREA.ajax_options").keyup();
             }
     );
+
 
     $("#installed-apps BUTTON.ajax_data").on("click", function () {
                 var data = window.JSON.parse(
                         $("#installed-apps TEXTAREA.ajax_data").val());
                 try {
-                    $.ajax({type: "post", url: token_endpoint, data: data}).
+                    $.ajax(window.JSON.parse($("#installed-apps TEXTAREA.ajax_options").val())).
                             done(function (e) {
                                 $("#access_token_result").val("done");
                             }).fail(function (jqxhr, textstatus, e) {
