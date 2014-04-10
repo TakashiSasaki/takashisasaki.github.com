@@ -45,6 +45,11 @@
     ];
     function handleClientLoad() {
         gapi.client.load('drive', 'v2');
+        var access_token = localStorage.getItem("access_token");
+        alert(access_token);
+        if (access_token) {
+            gapi.auth.setToken(access_token);
+        }
         $("#page-google-drive-demo BUTTON.auth").on("click",
                 function () {
                     authenticate();
