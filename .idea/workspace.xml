@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.appcache" afterPath="$PROJECT_DIR$/manifest.appcache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="takashisasaki.github.com.iws" />
@@ -30,18 +30,27 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="35" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="238">
+            <state line="26" column="80" selection-start="1309" selection-end="1309" vertical-scroll-proportion="-12.461538" vertical-offset="118" max-vertical-offset="1122">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manifest.appcache" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="13" selection-start="107" selection-end="107" vertical-scroll-proportion="0.102926336" vertical-offset="0" max-vertical-offset="991">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manifest.appcache" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.appcache">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.08357915" vertical-offset="0" max-vertical-offset="1017">
+            <state line="5" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
               <folding />
             </state>
           </provider>
@@ -51,15 +60,6 @@
         <entry file="file://$PROJECT_DIR$/html/google-drive.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="6" selection-start="246" selection-end="246" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="google-drive.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/google-drive.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="23" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="986">
               <folding />
             </state>
           </provider>
@@ -154,14 +154,14 @@
         <option value="$PROJECT_DIR$/html/google-oauth2-installed-apps.html" />
         <option value="$PROJECT_DIR$/html/google-oauth2-client-side.html" />
         <option value="$PROJECT_DIR$/html/google-drive.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/manifest.appcache" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="y" value="165" />
+    <option name="x" value="30" />
+    <option name="y" value="243" />
     <option name="width" value="1152" />
     <option name="height" value="1157" />
   </component>
@@ -441,7 +441,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="165" width="1152" height="1157" extended-state="0" />
+    <frame x="30" y="243" width="1152" height="1157" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -764,23 +764,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.appcache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="80" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.2901879" vertical-offset="164" max-vertical-offset="1122">
+        <state line="26" column="80" selection-start="1309" selection-end="1309" vertical-scroll-proportion="-12.461538" vertical-offset="118" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="35" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.appcache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.08357915" vertical-offset="0" max-vertical-offset="1017">
+        <state line="6" column="13" selection-start="107" selection-end="107" vertical-scroll-proportion="0.102926336" vertical-offset="0" max-vertical-offset="991">
           <folding />
         </state>
       </provider>
