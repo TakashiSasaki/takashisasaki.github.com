@@ -5,8 +5,8 @@
     <title></title>
     <script>
         setTimeout(function () {
-            localStorage.setItem("page", "google-oauth2-client-side.html");
-            document.localtion = "index.html";
+            localStorage.setItem("page", "html/google-oauth2-client-side.html");
+            document.location = "../index.html";
         }, 100);
     </script>
 </head>
@@ -50,17 +50,17 @@
             localStorage.setItem("google-oauth2-client-side-token", token);
             //$("#page-google-oauth2-client-side INPUT.token").val();
             setTimeout(function () {
-                document.location = "index.html";
+                document.location = "../index.html";
                 //$(':mobile-pagecontainer').pagecontainer("change", "index.html", {transition: 'flip', changeHash: false});
             }, 2000);
         } else {
             setTimeout(function () {
-                document.location = "index.html";
+                document.location = "../index.html";
             }, 1000);
         }
     } else {
         setTimeout(function () {
-            document.location = "index.html";
+            document.location = "../index.html";
         }, 1000);
     }
 </script>
