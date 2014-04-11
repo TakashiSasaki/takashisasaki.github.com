@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="" />
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,19 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="80" selection-start="1309" selection-end="1309" vertical-scroll-proportion="-12.461538" vertical-offset="118" max-vertical-offset="1122">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="107" selection-end="107" vertical-scroll-proportion="0.102926336" vertical-offset="0" max-vertical-offset="991">
+            <state line="6" column="7" selection-start="316" selection-end="316" vertical-scroll-proportion="0.102926336" vertical-offset="0" max-vertical-offset="991">
               <folding />
             </state>
           </provider>
@@ -50,7 +38,7 @@
       <file leaf-file-name="manifest.appcache" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.appcache">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+            <state line="5" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
               <folding />
             </state>
           </provider>
@@ -59,7 +47,7 @@
       <file leaf-file-name="google-drive.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/google-drive.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="6" selection-start="246" selection-end="246" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="714">
+            <state line="11" column="6" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -68,7 +56,7 @@
       <file leaf-file-name="google-oauth2-installed-apps.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/google-oauth2-installed-apps.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="31" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1513">
+            <state line="14" column="31" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1513">
               <folding />
             </state>
           </provider>
@@ -77,7 +65,7 @@
       <file leaf-file-name="google-oauth2-client-side.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/google-oauth2-client-side.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="39" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1258">
+            <state line="18" column="39" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1258">
               <folding />
             </state>
           </provider>
@@ -86,7 +74,7 @@
       <file leaf-file-name="google-oauth2-devices.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/google-oauth2-devices.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="663">
+            <state line="30" column="0" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -95,7 +83,7 @@
       <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="901">
+            <state line="47" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -160,8 +148,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="30" />
-    <option name="y" value="243" />
+    <option name="x" value="52" />
+    <option name="y" value="255" />
     <option name="width" value="1152" />
     <option name="height" value="1157" />
   </component>
@@ -191,6 +179,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -225,7 +214,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,6 +344,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -377,9 +368,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -441,15 +429,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="243" width="1152" height="1157" extended-state="0" />
-    <editor active="true" />
+    <frame x="52" y="255" width="1152" height="1157" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30856642" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23426573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2542373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -486,6 +474,48 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/google-oauth2-installed-apps.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="31" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/google-oauth2-client-side.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="39" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/google-oauth2-devices.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/google-oauth2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://C:/Python34/Lib/socketserver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="670" column="0" selection-start="21608" selection-end="21608" vertical-scroll-proportion="0.0" vertical-offset="11390" max-vertical-offset="12835" />
@@ -511,13 +541,6 @@
     <entry file="file://C:/Python34/Lib/http/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="314" column="0" selection-start="11390" selection-end="11390" vertical-scroll-proportion="0.0" vertical-offset="5338" max-vertical-offset="21046" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="2134" selection-end="2134" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="867">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -552,13 +575,6 @@
         <state line="314" column="0" selection-start="11390" selection-end="11390" vertical-scroll-proportion="0.0" vertical-offset="5338" max-vertical-offset="21046" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1207" />
@@ -582,13 +598,6 @@
     <entry file="file://C:/Python34/Lib/http/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="399" column="0" selection-start="14708" selection-end="14708" vertical-scroll-proportion="0.0" vertical-offset="6783" max-vertical-offset="21046" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="867">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -616,13 +625,6 @@
         <state line="399" column="0" selection-start="14708" selection-end="14708" vertical-scroll-proportion="0.0" vertical-offset="6783" max-vertical-offset="21046" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1207" />
@@ -646,13 +648,6 @@
     <entry file="file://C:/Python34/Lib/http/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="399" column="0" selection-start="14708" selection-end="14708" vertical-scroll-proportion="0.0" vertical-offset="6783" max-vertical-offset="21046" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="544">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handler1.py">
@@ -696,9 +691,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/google-oauth2-installed-apps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="33" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
-          <folding />
-        </state>
+        <state line="21" column="33" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/google-oauth2-devices.js">
@@ -710,9 +703,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/google-drive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="23" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="387" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="33" column="23" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="387" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/google-oauth2.js">
@@ -724,7 +715,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/google-oauth2-devices.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="663">
+        <state line="30" column="0" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
@@ -738,28 +729,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="901">
+        <state line="47" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/google-oauth2-installed-apps.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1513">
+        <state line="14" column="31" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1513">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/google-oauth2-client-side.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1258">
+        <state line="18" column="39" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1258">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/google-drive.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="246" selection-end="246" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="714">
+        <state line="11" column="6" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
@@ -771,16 +762,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="80" selection-start="1309" selection-end="1309" vertical-scroll-proportion="-12.461538" vertical-offset="118" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="107" selection-end="107" vertical-scroll-proportion="0.102926336" vertical-offset="0" max-vertical-offset="991">
+        <state line="6" column="7" selection-start="316" selection-end="316" vertical-scroll-proportion="0.102926336" vertical-offset="0" max-vertical-offset="991">
           <folding />
         </state>
       </provider>
