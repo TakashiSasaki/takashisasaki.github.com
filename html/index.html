@@ -11,7 +11,7 @@
 <div id="right-panel" data-display="overlay" data-theme="a" data-position="right">
     <ul data-role="listview"></ul>
 </div>
-<div data-role="page">
+<div data-role="page" id="index">
     <header data-role="header" data-position="fixed">
         <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
 
@@ -45,7 +45,14 @@
 <script src="http://url.websanova.com/url.min.js"></script>
 <script src="http://timeago.yarp.com/jquery.timeago.js"></script>
 <script>
-    $(document).on("pagecreate", function (e, ui) {
+    $("#index").on("pagecreate", function (e, ui) {
+        var page = localStorage.getItem("page");
+        localStorage.removeItem("page");
+        if (page) {
+            setTimeout(function () {
+                $.mobile.changePage(page);
+            }, 1000);
+        }
     });
 </script>
 <script src="../panel.js"></script>

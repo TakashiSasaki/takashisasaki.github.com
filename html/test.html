@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <meta http-equiv="refresh" content="1;URL=index.html">
+    <script>
+        setTimeout(function () {
+            localStorage.setItem("page", "test.html");
+            document.location = "index.html";
+        }, 1000);
+    </script>
 </head>
 <body>
 <div data-role="page" id="page-test-1" class="ui-responsive-panel">
