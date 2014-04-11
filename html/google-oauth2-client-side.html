@@ -23,10 +23,40 @@
         </div>
         <div class="ui-body ui-body-a">
             <a class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">アクセストークンを取得</a>
+
+            <p>上のボタンを押すと以下のURLに遷移します。</p>
             <input readonly="true" class="url">
-            <input readonly="true" class="token">
+
+            <div>
+                <p>直近に取得したアクセストークン（既に期限切れかもしれません）</p>
+                <input readonly="true" class="token">
+            </div>
         </div>
     </div>
+    <script src="google-oauth2.js"></script>
+    <script src="google-oauth2-client-side.js"></script>
 </div>
+<script src="http://url.websanova.com/url.min.js"></script>
+<script>
+    if (window.url("#access_token") != null) {
+        if (window.url("#state") == "hello+world+state") {
+            var token = window.url("#access_token");
+            localStorage.setItem("google-oauth2-client-side-token", token);
+            //$("#page-google-oauth2-client-side INPUT.token").val();
+            setTimeout(function () {
+                document.location = "index.html";
+                //$(':mobile-pagecontainer').pagecontainer("change", "index.html", {transition: 'flip', changeHash: false});
+            }, 2000);
+        } else {
+            setTimeout(function () {
+                document.location = "index.html";
+            }, 1000);
+        }
+    } else {
+        setTimeout(function () {
+            document.location = "index.html";
+        }, 1000);
+    }
+</script>
 </body>
 </html>
