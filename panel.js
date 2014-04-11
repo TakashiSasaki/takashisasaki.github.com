@@ -1,23 +1,19 @@
 $(document).one("pagebeforecreate", function (e, ui) {
-
-    var panel = "";
-    panel += '<ul data-role="listview">';
-    panel += '<li><a href="index.html">ホーム</a></li>';
-    panel += '<li data-role="list-divider">実験</li>';
-    panel += '<li><a href="google-oauth2-js.html#installed-apps">OAuth2 for Installed Apps</a></li>';
-    panel += '<li><a href="google-oauth2-js.html#client-side">OAuth2 for Client-side</a></li>';
-    panel += '<li><a href="google-oauth2-js.html#devices">OAuth2 for Devices</a></li>';
-    panel += '<li><a href="google-drive.html">Google Drive API Demo</a></li>';
-    panel += '<li><a href="offline-content.html">Offlinet Content Demo</a></li>';
-    panel += '</ul>';
-    panel += '<div id="script-buffer"></div>';
-    panel += "";
+    //alert("pagebeforecreate");
+    $("#left-panel ul").append('<li data-role="list-divider">めにう</li>');
+    $("#left-panel ul").append('<li><a href="index.html">ホーム</a></li>');
+    $("#left-panel ul").append('<li><a href="google-oauth2-js.html">OAuth2関係の実験</a></li>');
+    $("#left-panel ul").append('<li><a href="google-drive.html">Google Drive API Demo</a></li>');
+    $("#left-panel ul").append('<li><a href="offline-content.html">Offline Content Demo</a></li>');
+    $("#left-panel ul").append('<li><a href="test.html">test</a></li>');
     //$.mobile.pageContainer.append(panel);
     //$.mobile.pageContainer.prepend(panel);
-    $("#panel").append(panel);
-    //$("body").append(panel);
-    $("#panel").panel();
-    $("#panel ul").listview();
+    //$("body").append(panel)
+    $("#left-panel").append('<div id="script-buffer"></div>');
+    $("#left-panel").panel();
+    $("#left-panel ul").listview();
+    $("#right-panel").panel({ dismissible: false });
+    $("#right-panel ul").listview();
 
     localhostPingCallback();
 });
