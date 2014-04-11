@@ -1,8 +1,10 @@
-$(document).one("pagebeforecreate", function (e, ui) {
+$(document).one("pagecreate", function (e, ui) {
     //alert("pagebeforecreate");
     $("#left-panel ul").append('<li data-role="list-divider">めにう</li>');
     $("#left-panel ul").append('<li><a href="index.html">ホーム</a></li>');
-    $("#left-panel ul").append('<li><a href="google-oauth2-js.html">OAuth2関係の実験</a></li>');
+    $("#left-panel ul").append('<li><a href="google-oauth2-client-side.html">OAuth2 for JavaScript Apps</a></li>');
+    $("#left-panel ul").append('<li><a href="google-oauth2-installed-apps.html">OAuth2 for Installed Apps</a></li>');
+    $("#left-panel ul").append('<li><a href="google-oauth2-devices.html">OAuth2 for Devices</a></li>');
     $("#left-panel ul").append('<li><a href="google-drive.html">Google Drive API Demo</a></li>');
     $("#left-panel ul").append('<li><a href="offline-content.html">Offline Content Demo</a></li>');
     $("#left-panel ul").append('<li><a href="test.html">test</a></li>');

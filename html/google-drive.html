@@ -4,13 +4,11 @@
     <title></title>
 </head>
 <body>
-<div data-role='panel' id='panel' data-display="overlay" data-theme="b"></div>
-
-<div data-role="page" id="page-google-drive-demo">
+<div data-role="page" id="google-drive">
     <header data-role="header" data-position="fixed">
-        <a href="#panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+        <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
 
-        <h1>takashisasaki.github.io</h1>
+        <h1>Googleドライブの文書のタイトル一覧を取得する。</h1>
     </header>
     <div class="ui-content" role="main">
         <div>Google APIs Client Library for JavaScriptを使うデモ。
@@ -26,61 +24,8 @@
     <div data-role="footer">
         <h3></h3>
     </div>
+    <script src="google-drive.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 </div>
-<script>
-    var CLIENT_ID = "982049359064-khobeosb81scm9kt1387mg78o399t71u.apps.googleusercontent.com";
-    var SCOPES = [
-        'https://www.googleapis.com/auth/drive.file',
-        'https://www.googleapis.com/auth/drive',
-        'https://www.googleapis.com/auth/userinfo.email',
-        'https://www.googleapis.com/auth/userinfo.profile'
-        // Add other scopes needed by your application.
-    ];
-    function handleClientLoad() {
-        gapi.client.load('drive', 'v2');
-        google.load('visualization', '1', {packages: ['table', 'corechart'], callback: function () {
-                }}
-        );
-        var access_token = localStorage.getItem("access_token");
-        if (access_token) {
-            gapi.auth.setToken(access_token);
-        }
-        $("#page-google-drive-demo BUTTON.auth").on("click",
-                function () {
-                    authenticate();
-                    return false;
-                }
-        );
-        $("#page-google-drive-demo BUTTON.list").on("click",
-                function () {
-                    var request = gapi.client.drive.files.list();
-                    request.execute(function (resp) {
-                        items = resp.items;
-                        var data = new google.visualization.DataTable();
-                        data.addColumn("string", "title");
-                        if (items) {
-                            items.forEach(function (x) {
-                                data.addRow([x.title]);
-                            });
-                        }
-                        var table = new google.visualization.Table(document.getElementById("file-list-table"));
-                        table.draw(data, {showRowNumber: true});
-                    });
-                }
-        )
-    }
-
-    function authenticate() {
-        localStorage.removeItem("gapi_oauth2_token");
-        gapi.auth.authorize({client_id: CLIENT_ID, scope: SCOPES.join(' '), immediate: false},
-                function () {
-                    var gapi_oauth2_token = gapi.auth.getToken();
-                    localStorage.setItem("access_token", gapi_oauth2_token.access_token);
-                }
-        );
-    }
-
-</script>
-<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 </body>
 </html>

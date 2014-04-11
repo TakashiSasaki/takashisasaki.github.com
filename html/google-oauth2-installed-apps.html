@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div data-role="page" id="google-oauth2-installed-apps">
+    <header data-role="header">
+        <h3>OAuth2 for Installed Apps</h3>
+        <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+    </header>
+    <div class="ui-content" role="main">
+        <p>Google APIを使うためのOAuth2による認可において、
+            ブラウザなどのリッチクライアントが搭載されたデバイスでは<span class="auth_endpoint var">
+            </span>をエンドポイントとしてAuthorization Code Grantを行う。
+        </p>
+
+        <p>Authorization Code Grantでは、クライアントは最初に認可コードを取得し、
+            それをアクセストークンと引き換える。この際にリフレッシュトークンが得られる場合もある。
+            リフレッシュトークンを使って、期限の切れたアクセストークンを更新することができる。
+            このときclient_secretが必要となるので、Confidentialクライアントとして扱われていることになる。
+        </p>
+
+        <p>OAuth2ではPublicクライアントとConfidentialクライアントが定義されている。
+            Publicクライアントはブラウザを含めユーザーのデバイスの上で動くような
+            client_secretを秘密にできないクライアント、
+            Confidentialクライアントはサーバ上で動くようなclient_secretを秘密にできるクライアントである。
+        </p>
+
+
+        <div class="ui-corner-all">
+            <div class="ui-bar ui-bar-a"><h3>①OOBによる認可コードの取得</h3></div>
+            <div class="ui-body ui-body-a">
+                <p>リダイレクト先としてOOB(out-of-band)を、
+                    レスポンスタイプとしてcodeを指定し認可のためのサーバを呼び出す。
+                    OOBとはユーザーが認可コードをコピーアンドペーストなどの方法で取り扱う必要があることを意味する。
+                    認可サーバ上のページに認可コードが表示される。</p>
+                <a class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline oob"
+                   target="_blank">
+                    リダイレクト先をOOBとして認可コードを取得する</a>
+
+                <p>リダイレクト先としてhttp://localhostを、レスポンスタイプとしてcodeを指定し認可のためのサーバを呼び出す。
+                    localhostのウェブサーバが適切に設定されていればそこで認可コードを受け取ることができる。
+                    そうでない場合は単に空白かlocalhostに接続できない旨を表示するブラウザからのエラーを
+                    示すページが表示されるだろう。
+                </p>
+                <a class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline localhost"
+                   target="_blank">
+                    リダイレクト先をlocalhostとして認可コードを取得する</a>
+            </div>
+            <div class="ui-bar ui-bar-a">
+                <h3>②認可コードをアクセストークンへ交換</h3></div>
+            <div class="ui-body ui-body-a">
+                <p>残念ながらXmlHttpRequestを使って認可コードをアクセストークンに交換しようとしても、
+                    サーバ側がAccess-Control-Allow-Origin:*を付けるなどの方法でクロスドメイン制約を
+                    外してくれていないとたいていのブラウザでは動かない。
+                    下のボタンをクリックするとXmlHttpRequestが実行されるが、
+                    サーバーからのレスポンスを拒否するので何も起こらない。</p>
+                <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code">
+                <textarea placeholder="POSTすべきデータがここに表示されます" readonly="true" class="ajax_data"></textarea>
+                <button class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline ajax_data">
+                    XmlHttpRequestで認可コードをアクセストークンへ交換（失敗します）
+                </button>
+                <form method="post" action="http://localhost/proxy">
+                    <textarea placeholder="AJAXプロキシにPOSTするデータがここに表示されます" readonly="true"
+                              class="ajax_options" rows="5" name="ajax_options"></textarea>
+                    <button class="ajax_options" type="submit">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
