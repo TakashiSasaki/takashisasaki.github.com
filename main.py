@@ -71,7 +71,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     def responseIndexHtml(self):
         self.send_response(200)
         self.send_header("Content-Type", "text/html")
-        file = open("index.html", encoding='utf-8')
+        file = open("html/index.html", encoding='utf-8')
         body = file.read()
         self.wfile.write(bytes(body, "UTF-8"))
 

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/google-oauth2-js.html" afterPath="$PROJECT_DIR$/google-oauth2-js.html" />
+      <change type="MOVED" beforePath="C:\Users\sasaki\Documents\GitHub\takashisasaki.github.com\google-oauth2-js.html" afterPath="$PROJECT_DIR$/html/google-oauth2-js.html" />
+      <change type="MOVED" beforePath="C:\Users\sasaki\Documents\GitHub\takashisasaki.github.com\index.html" afterPath="$PROJECT_DIR$/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/panel.js" afterPath="$PROJECT_DIR$/panel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,22 +33,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="2056" selection-end="2056" vertical-scroll-proportion="-21.346153" vertical-offset="210" max-vertical-offset="867">
+            <state line="4" column="40" selection-start="233" selection-end="233" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="867">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="17" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1428">
-              <folding>
-                <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
-                <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
-              </folding>
+            <state line="28" column="17" selection-start="878" selection-end="878" vertical-scroll-proportion="-0.089852005" vertical-offset="476" max-vertical-offset="1428">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,7 +53,7 @@
       <file leaf-file-name="socketserver.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://C:/Python34/Lib/socketserver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="670" column="0" selection-start="21608" selection-end="21608" vertical-scroll-proportion="0.0" vertical-offset="11390" max-vertical-offset="12767">
+            <state line="670" column="0" selection-start="21608" selection-end="21608" vertical-scroll-proportion="0.0" vertical-offset="11390" max-vertical-offset="12835">
               <folding />
             </state>
           </provider>
@@ -62,25 +62,25 @@
       <file leaf-file-name="proxy.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proxy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="88" selection-start="4997" selection-end="4997" vertical-scroll-proportion="0.0" vertical-offset="2058" max-vertical-offset="2754">
+            <state line="145" column="88" selection-start="4997" selection-end="4997" vertical-scroll-proportion="0.0" vertical-offset="2465" max-vertical-offset="2890">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="google-oauth2-js.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
+        <entry file="file://$PROJECT_DIR$/html/google-oauth2-js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="56" selection-start="5590" selection-end="5590" vertical-scroll-proportion="-4.8846154" vertical-offset="1981" max-vertical-offset="3961">
+            <state line="121" column="65" selection-start="5353" selection-end="5353" vertical-scroll-proportion="-2.9230769" vertical-offset="1981" max-vertical-offset="3961">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panel.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="panel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.74358976" vertical-offset="0" max-vertical-offset="663">
+            <state line="5" column="29" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -89,7 +89,7 @@
       <file leaf-file-name="handler1.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handler1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="14" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+            <state line="1" column="14" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="306">
               <folding />
             </state>
           </provider>
@@ -98,7 +98,7 @@
       <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://C:/Python34/Lib/http/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="314" column="0" selection-start="11390" selection-end="11390" vertical-scroll-proportion="0.0" vertical-offset="4709" max-vertical-offset="20774">
+            <state line="314" column="0" selection-start="11390" selection-end="11390" vertical-scroll-proportion="0.0" vertical-offset="5338" max-vertical-offset="21046">
               <folding />
             </state>
           </provider>
@@ -122,12 +122,13 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/proxy.py" />
         <option value="$PROJECT_DIR$/google-oauth2-js.html" />
+        <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/panel.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
+    <option name="x" value="286" />
     <option name="y" value="163" />
     <option name="width" value="1001" />
     <option name="height" value="1086" />
@@ -158,7 +159,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -177,8 +177,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="takashisasaki.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="takashisasaki.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,6 +208,11 @@
     <option name="myPythonConsoleState">
       <console-settings />
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sasaki\Documents\GitHub\takashisasaki.github.com\html" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -300,9 +320,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -324,6 +341,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -385,7 +405,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="163" width="1001" height="1086" extended-state="0" />
+    <frame x="286" y="163" width="1001" height="1086" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -394,7 +414,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20845921" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27245206" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27245206" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -430,7 +450,63 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="2134" selection-end="2134" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="17" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="670" column="0" selection-start="21608" selection-end="21608" vertical-scroll-proportion="0.0" vertical-offset="11390" max-vertical-offset="12835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="88" selection-start="4997" selection-end="4997" vertical-scroll-proportion="0.0" vertical-offset="2465" max-vertical-offset="2890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/google-oauth2-js.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="56" selection-start="5590" selection-end="5590" vertical-scroll-proportion="0.0" vertical-offset="1981" max-vertical-offset="3961">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="14" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/http/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="314" column="0" selection-start="11390" selection-end="11390" vertical-scroll-proportion="0.0" vertical-offset="5338" max-vertical-offset="21046">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="867">
           <folding />
@@ -440,10 +516,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1207">
-          <folding>
-            <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
-            <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -461,7 +534,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
+    <entry file="file://$PROJECT_DIR$/html/google-oauth2-js.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="191" column="45" selection-start="8399" selection-end="8399" vertical-scroll-proportion="0.0" vertical-offset="2995" max-vertical-offset="3842">
           <folding />
@@ -482,7 +555,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="867">
           <folding />
@@ -492,10 +565,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1207">
-          <folding>
-            <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
-            <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -527,7 +597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="544">
           <folding />
@@ -537,10 +607,7 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1207">
-          <folding>
-            <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
-            <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -572,7 +639,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="544">
           <folding />
@@ -583,23 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="14" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="2056" selection-end="2056" vertical-scroll-proportion="-21.346153" vertical-offset="210" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1428">
-          <folding>
-            <marker date="1397104617703" expanded="true" signature="366:2588" placeholder="..." />
-            <marker date="1397104617703" expanded="true" signature="2376:2588" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,16 +674,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/google-oauth2-js.html">
+    <entry file="file://$PROJECT_DIR$/html/google-oauth2-js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="56" selection-start="5590" selection-end="5590" vertical-scroll-proportion="-4.8846154" vertical-offset="1981" max-vertical-offset="3961">
+        <state line="121" column="65" selection-start="5353" selection-end="5353" vertical-scroll-proportion="-2.9230769" vertical-offset="1981" max-vertical-offset="3961">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="40" selection-start="233" selection-end="233" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/panel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.74358976" vertical-offset="0" max-vertical-offset="663">
+        <state line="5" column="29" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="17" selection-start="878" selection-end="878" vertical-scroll-proportion="-0.089852005" vertical-offset="476" max-vertical-offset="1428">
           <folding />
         </state>
       </provider>
