@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.appcache" afterPath="$PROJECT_DIR$/manifest.appcache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +31,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="73" selection-start="2166" selection-end="2166" vertical-scroll-proportion="0.7693111" vertical-offset="215" max-vertical-offset="1173">
+            <state line="27" column="83" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.27139875" vertical-offset="199" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
@@ -42,7 +40,7 @@
       <file leaf-file-name="manifest.appcache" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.appcache">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+            <state line="8" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="238">
               <folding />
             </state>
           </provider>
@@ -348,6 +346,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -369,9 +370,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -768,7 +766,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="73" selection-start="2166" selection-end="2166" vertical-scroll-proportion="0.7693111" vertical-offset="215" max-vertical-offset="1173">
+        <state line="27" column="83" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.27139875" vertical-offset="199" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
