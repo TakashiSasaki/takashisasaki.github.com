@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="manifest.appcache">
+<html manifest="manifest.appcache_">
 <head><title>ぼく</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css"/>
     <link rel="stylesheet" href="icon.css"/>
@@ -16,16 +16,36 @@
     <header data-role="header" data-position="fixed">
         <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
 
+        <h1></h1>
+    </header>
+    <div class="ui-content" role="main">
+        <img src="img/bon.jpg">
+    </div>
+    <div data-role="footer">
+        <h1></h1>
+    </div>
+</div>
+<div data-role="page" id="appcache">
+    <header data-role="header" data-position="fixed">
+        <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+
         <h1>ここはどこ？</h1>
     </header>
     <div class="ui-content" role="main">
-        ここはどこ？
-        <p>Chromeでアプリケーションキャッシュを確認するにはアドレスバーに about:appcache-internals と入力します。
+        <p>Chromeでは以下の特殊なURLによりアプリケーションキャッシュの状態を確認できます。
         </p>
-        <a href="html/test.html">html/test.html</a>
+        <input value="about:appcache-internals" onClick="this.select();">
 
-        <p>
-            <span class="appcache indicator">このブラウザがアプリケーションキャッシュに対応しているかどうか分かりません。</span></p>
+        <div class="appcache">
+            <p>
+                <span class="appcache indicator">このブラウザがアプリケーションキャッシュに対応しているかどうか分かりません。</span></p>
+            <button data-inline="true">マニフェストファイルの更新を確認する</button>
+            <input>
+        </div>
+        <div class="ui-field-contain">
+            ブラウザのアプリケーションキャッシュ対応
+            <input class="function" value="未確認" readonly="true">
+        </div>
     </div>
     <div data-role="footer">
         <h1>ここはどこ？</h1>
@@ -52,11 +72,11 @@
     });
 </script>
 <script>
-    $("#index").on("pagecreate", function (e, ui) {
+    $("#appcache").on("pagecreate", function (e, ui) {
         if (window.applicationCache) {
-            $("#index SPAN.appcache.indicator").text("このブラウザはアプリケーションキャッシュに対応しています。");
+            $("#appcache INPUT.function").val("対応");
         } else {
-            $("#index SPAN.appcache.indicator").text("このブラウザはアプリケーションキャッシュに対応していません。");
+            $("#appcache INPUT.function").val("非対応");
         }
     });
 </script>
