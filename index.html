@@ -20,7 +20,10 @@
     </header>
     <div class="ui-content" role="main">
         ここはどこ？
+        <p>Chromeでアプリケーションキャッシュを確認するにはアドレスバーに about:appcache-internals と入力します。
+        </p>
         <a href="html/test.html">html/test.html</a>
+        <span class="appcache indicator">AAA</span>
     </div>
     <div data-role="footer">
         <h1>ここはどこ？</h1>
@@ -42,7 +45,16 @@
         } else {
             setTimeout(function () {
                 $.mobile.changePage("html/bookmarks.html");
-            }, 2000);
+            }, 200000);
+        }
+    });
+</script>
+<script>
+    $("#index").on("pagecreate", function (e, ui) {
+        if (window.applicationCache) {
+            $("#index SPAN.appcache.indicator").text("asafsodaipjfpsdajfi");
+        } else {
+            $("#index SPAN.appcache.indicator").text("no applicationCache");
         }
     });
 </script>
