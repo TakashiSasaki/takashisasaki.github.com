@@ -32,21 +32,23 @@
         <h1>ここはどこ？</h1>
     </header>
     <div class="ui-content" role="main">
-        <p>Chromeでは以下の特殊なURLによりアプリケーションキャッシュの状態を確認できます。
-        </p>
-        <input value="about:appcache-internals" onClick="this.select();">
+        <form>
+            <div class="ui-field-contain">
+                <label for="appcache-chrome">Chromeでは次の特殊なURLによりアプリケーションキャッシュの状態を確認できます</label>
+                <input id="appcache-chrome" readonly="true" value="about:appcache-internals" onClick="this.select();">
+            </div>
 
-        <div class="appcache">
-            <p>
-                <span class="appcache indicator">このブラウザがアプリケーションキャッシュに対応しているかどうか分かりません。</span></p>
-            <button data-inline="true">マニフェストファイルの更新を確認する</button>
-            <input>
-        </div>
-        <div class="ui-field-contain">
-            ブラウザのアプリケーションキャッシュ対応
-            <input class="function" value="未確認" readonly="true">
-        </div>
+            <div class=" ui-field-contain">
+                <label for="appcache-function">ブラウザのアプリケーションキャッシュ対応</label>
+                <input value="未確認" readonly="true" id="appcache-function">
+            </div>
+            <div class="ui-field-contain">
+                <label for="appcache-status">アプリケーションキャッシュの状態</label>
+                <input value="状態を調べる前" readonly="true" id="appcache-status">
+            </div>
+        </form>
     </div>
+    <button>アプリケーションキャッシュマニフェストファイルを取りに行く</button>
     <div data-role="footer">
         <h1>ここはどこ？</h1>
     </div>
@@ -70,14 +72,52 @@
             }, 200000);
         }
     });
+    $("#index").one("pagecreate", function (e, ui) {
+        window.applicationCache.addEventListener('updateready', function () {
+            alert("updateready");
+        });
+        //window.applicationCache.update();
+    });
 </script>
 <script>
     $("#appcache").on("pagecreate", function (e, ui) {
-        if (window.applicationCache) {
-            $("#appcache INPUT.function").val("対応");
+                if (window.applicationCache) {
+                    $("#appcache-function").val("対応");
+                } else {
+                    $("#appcache-function").val("非対応");
+                }
+                updateAppcacheStatus();
+            }
+    );
+
+    function updateAppcacheStatus() {
+        var ac = window.applicationCache;
+        if (ac.status == ac.UNCACHED) {
+            $("#appcache-status").val("キャッシュ不能、マニフェストが無い (UNCACHED)");
+        } else if (ac.status == ac.IDLE) {
+            $("#appcache-status").val("アイドル状態 (IDLE)");
+        } else if (ac.status == ac.CHECKING) {
+            $("#appcache-status").val("マニフェストチェック中 (CHECKING)");
+        } else if (ac.status == ac.DOWNLOADING) {
+            $("#appcache-status").val("ダウンロード中 (DOWNLOADING");
+        } else if (ac.status == ac.UPDATEREADY) {
+            $("#appcache-status").val("ダウンロード終了 (UPDATEREADY)");
+        } else if (ac.status == ac.OBSOLETE) {
+            $("#appcache-status").val("腐っている (OBSOLETE");
         } else {
-            $("#appcache INPUT.function").val("非対応");
+            $("#appcache-status").val("状態不明");
         }
+    }
+
+    $("#appcache BUTTON").on("click", function () {
+        // window.applicationCache.update();
+        updateAppcacheStatus();
+    });
+
+</script>
+<script>
+    $(document).on("swiperight", function () {
+        $("#left-panel").panel("open");
     });
 </script>
 <script src="panel.js"></script>
