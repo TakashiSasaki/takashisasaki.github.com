@@ -1,3 +1,4 @@
 *.pyc
 *.xml___jb_bak___
 *.html___jb_old___
+.idea/workspace.xml
