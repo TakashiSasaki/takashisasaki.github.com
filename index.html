@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="manifest.appcache_">
+<html manifest="manifest.appcache">
 <head><title>ぼく</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css"/>
     <link rel="stylesheet" href="icon.css"/>
@@ -110,8 +110,14 @@
     }
 
     $("#appcache BUTTON").on("click", function () {
-        // window.applicationCache.update();
-        updateAppcacheStatus();
+        window.applicationCache.addEventListener('updateready', function () {
+        });
+        setTimeout(updateAppcacheStatus(), 100);
+        setTimeout(updateAppcacheStatus(), 100);
+        setTimeout(updateAppcacheStatus(), 100);
+        setTimeout(updateAppcacheStatus(), 100);
+        setTimeout(updateAppcacheStatus(), 100);
+        window.applicationCache.update();
     });
 
 </script>
