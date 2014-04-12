@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.appcache" afterPath="$PROJECT_DIR$/manifest.appcache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/panel.js" afterPath="$PROJECT_DIR$/panel.js" />
-    </list>
+    <list default="true" id="57e24bb0-9f64-422a-8dad-1c7806829e76" name="Default" comment="" />
     <ignored path="takashisasaki.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="7" selection-start="2575" selection-end="2575" vertical-scroll-proportion="0.74530274" vertical-offset="493" max-vertical-offset="1547">
+            <state line="51" column="10" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.39039665" vertical-offset="493" max-vertical-offset="1547">
               <folding />
             </state>
           </provider>
@@ -777,7 +773,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="7" selection-start="2575" selection-end="2575" vertical-scroll-proportion="0.74530274" vertical-offset="493" max-vertical-offset="1547">
+        <state line="51" column="10" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.39039665" vertical-offset="493" max-vertical-offset="1547">
           <folding />
         </state>
       </provider>
