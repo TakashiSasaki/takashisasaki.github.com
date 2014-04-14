@@ -83,7 +83,8 @@
     });
     $("#index").one("pagecreate", function (e, ui) {
         window.applicationCache.addEventListener('updateready', function () {
-            alert("updateready");
+            window.location.reload();
+            //alert("updateready");
         });
         //window.applicationCache.update();
     });
