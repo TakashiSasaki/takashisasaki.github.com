@@ -1,0 +1,6 @@
+#!/bin/sh
+# copy this script to .git/hook/pre-commit
+
+echo "#" `date` >> manifest.appcache
+git add manifest.appcache
+
