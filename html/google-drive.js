@@ -23,7 +23,7 @@ function handleClientLoad() {
     );
     $("#google-drive BUTTON.list").on("click",
         function () {
-            var request = gapi.client.drive.files.list();
+            var request = gapi.client.drive.files.list({"q": "title contains '課題'"});
             request.execute(function (resp) {
                 items = resp.items;
                 var data = new google.visualization.DataTable();

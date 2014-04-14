@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html manifest="manifest.appcache">
+<html manifest="manifest.appcache_">
 <head><title>ぼく</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css"/>
     <link rel="stylesheet" href="icon.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-<div id='left-panel' data-display="overlay" data-theme="b">
-    <ul data-role="listview"> '
-        <li data-role="list-divider">メニュー</li>
-        <li><a href="#index">ホーム</a></li>
-        <li><a href="#appcache">アプリケーションキャッシュの操作</a></li>
-        <li><a href="html/google-oauth2-client-side.html">OAuth2 for JavaScript Apps</a></li>
-        <li><a href="html/google-oauth2-installed-apps.html">OAuth2 for Installed Apps</a></li>
-        <li><a href="html/google-oauth2-devices.html">OAuth2 for Devices</a></li>
-        <li><a href="html/google-drive.html">Google Drive API Demo</a></li>
-        <li><a href="html/test.html">test</a></li>
-    </ul>
+<div id='left-panel' data-display="overlay" data-theme="b" data-role="panel">
+    <div data-role="collapsible">
+        <ul data-role="listview"> '
+            <li><a href="#index">ホーム</a></li>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <ul data-role="listview">
+            <li><a href="#appcache">アプリケーションキャッシュの操作</a></li>
+            <li><a href="html/google-oauth2-client-side.html">OAuth2 for JavaScript Apps</a></li>
+            <li><a href="html/google-oauth2-installed-apps.html">OAuth2 for Installed Apps</a></li>
+            <li><a href="html/google-oauth2-devices.html">OAuth2 for Devices</a></li>
+            <li><a href="html/google-drive.html">Google Drive API Demo</a></li>
+            <li><a href="html/test.html">test</a></li>
+        </ul>
+    </div>
 </div>
 <div id="right-panel" data-display="overlay" data-theme="a" data-position="right">
     <ul data-role="listview"></ul>

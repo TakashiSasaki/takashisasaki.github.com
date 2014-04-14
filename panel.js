@@ -3,11 +3,12 @@ $(document).one("pagecreate", function (e, ui) {
     //$.mobile.pageContainer.append(panel);
     //$.mobile.pageContainer.prepend(panel);
     //$("body").append(panel)
-    $("#left-panel").append('<div id="script-buffer"></div>');
+    //$("#left-panel").append('<div id="script-buffer"></div>');
     $("#left-panel").panel();
-    $("#left-panel ul").listview();
+    $("#left-panel UL").listview();
+    //$("#left-panel DIV").collapsible();
     $("#right-panel").panel({ dismissible: false });
-    $("#right-panel ul").listview();
+    $("#right-panel UL").listview();
 
     localhostPingCallback();
 });
