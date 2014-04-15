@@ -6,7 +6,7 @@
     <script>
         localStorage.setItem("page", "html/google-oauth2-installed-apps.html");
         setTimeout(function () {
-            //document.location = "../index.html"
+            document.location = "../index.html"
         }, 100);
     </script>
 </head>
@@ -64,16 +64,22 @@
                     下のボタンをクリックするとXmlHttpRequestが実行されるが、
                     サーバーからのレスポンスを拒否するので何も起こらない。</p>
 
-                <div class="ui-fiedl-contain">
+                <div class="ui-field-contain">
                     <label>認可コード</label>
                     <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code"></div>
-                <textarea placeholder="POSTすべきデータがここに表示されます" readonly="true" class="ajax_data"></textarea>
+                <div class="ui-field-contain">
+                    <label>エンドポイントにPOSTすべきデータ</label>
+                    <textarea placeholder="POSTすべきデータがここに表示されます" readonly="true" class="ajax_data"></textarea>
+                </div>
                 <button class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline ajax_data">
                     XmlHttpRequestで認可コードをアクセストークンへ交換（失敗します）
                 </button>
                 <form method="post" action="http://localhost/proxy">
-                    <textarea placeholder="AJAXプロキシにPOSTするデータがここに表示されます" readonly="true"
-                              class="ajax_options" rows="5" name="ajax_options"></textarea>
+                    <div class="ui-field-contain">
+                        <label>AJAXプロキシにPOSTすべきデータ</label>
+                        <textarea placeholder="AJAXプロキシにPOSTするデータがここに表示されます" readonly="true"
+                                  class="ajax_options" rows="5" name="ajax_options"></textarea>
+                    </div>
                     <button class="ajax_options" type="submit">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
                 </form>
                 <form method="post" class="token_endpoint_form">
