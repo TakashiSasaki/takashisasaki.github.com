@@ -63,7 +63,10 @@
                     外してくれていないとたいていのブラウザでは動かない。
                     下のボタンをクリックするとXmlHttpRequestが実行されるが、
                     サーバーからのレスポンスを拒否するので何も起こらない。</p>
-                <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code">
+
+                <div class="ui-fiedl-contain">
+                    <label>認可コード</label>
+                    <input name="code" placeholder="ここに①で取得した認可コードを貼り付けて下さい" id="authorization_code"></div>
                 <textarea placeholder="POSTすべきデータがここに表示されます" readonly="true" class="ajax_data"></textarea>
                 <button class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline ajax_data">
                     XmlHttpRequestで認可コードをアクセストークンへ交換（失敗します）
