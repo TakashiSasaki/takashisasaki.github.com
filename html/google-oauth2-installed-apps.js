@@ -16,6 +16,7 @@ $("#google-oauth2-installed-apps").on("pagecreate", function () {
     $("#google-oauth2-installed-apps A.oob").attr("href", authorization_url_oob);
     $("#google-oauth2-installed-apps A.localhost").attr("href", authorization_url_localhost);
 
+
     $("#google-oauth2-installed-apps INPUT").on("keyup",
         function () {
             var data = {
@@ -30,8 +31,16 @@ $("#google-oauth2-installed-apps").on("pagecreate", function () {
             var ajax_option = {type: "post", url: token_endpoint, data: data};
             $("#google-oauth2-installed-apps TEXTAREA.ajax_options").val(window.JSON.stringify(ajax_option));
             $("#google-oauth2-installed-apps TEXTAREA.ajax_options").keyup();
+
+            $("#google-oauth2-installed-apps FORM.token_endpoint_form").attr("action", token_endpoint);
+            $("#google-oauth2-installed-apps INPUT[name='client_id']").val(native_app_client_id);
+            $("#google-oauth2-installed-apps INPUT[name='client_secret']").val(native_app_client_secret);
+            $("#google-oauth2-installed-apps INPUT[name='grant_type']").val("authorization_code");
+            $("#google-oauth2-installed-apps INPUT[name='code']").val($("#google-oauth2-installed-apps INPUT").val());
+            $("#google-oauth2-installed-apps INPUT[name='redirect_uri']").val("urn:ietf:wg:oauth:2.0:oob");
         }
     );
+
 
     $("#google-oauth2-installed-apps BUTTON.ajax_data").on("click", function () {
             var data = window.JSON.parse(

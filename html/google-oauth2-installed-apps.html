@@ -6,7 +6,7 @@
     <script>
         localStorage.setItem("page", "html/google-oauth2-installed-apps.html");
         setTimeout(function () {
-            document.location = "../index.html"
+            //document.location = "../index.html"
         }, 100);
     </script>
 </head>
@@ -73,9 +73,33 @@
                               class="ajax_options" rows="5" name="ajax_options"></textarea>
                     <button class="ajax_options" type="submit">AJAXプロキシ経由で認可コードをアクセストークンへ交換</button>
                 </form>
+                <form method="post" class="token_endpoint_form">
+                    <div class="ui-field-contain">
+                        <label>client_id</label><input
+                            name="client_id" readonly="true"></label></div>
+                    <div class="ui-field-contain">
+                        <label>client_secret</label>
+                        <input name="client_secret" readonly="true" display="invalid"></div>
+                    <div class="ui-field-contain">
+                        <label>grant_type</label>
+                        <input name="grant_type" readonly="true"></div>
+                    <div class="ui-field-contain">
+                        <label>code</label>
+                        <input name="code" readonly="true"></div>
+                    <div class="ui-field-contain">
+                        <label>redirect_uri</label>
+                        <input name="redirect_uri" readonly="true"></div>
+                    <button type="submit">FORM経由で認可コードをアクセストークンへ交換</button>
+                </form>
             </div>
         </div>
     </div>
+    <script>
+        $("DIV.ui-field-contain INPUT").addClass("ui-input-text");
+        $("DIV.ui-field-contain INPUT").addClass("ui-body-inherit");
+        $("DIV.ui-field-contain INPUT").addClass("ui-corner-all");
+        $("DIV.ui-field-contain INPUT").addClass("ui-shadow-inset");
+    </script>
     <script src="google-oauth2.js"></script>
     <script src="google-oauth2-installed-apps.js"></script>
 </div>
