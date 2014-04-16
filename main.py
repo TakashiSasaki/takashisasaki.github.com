@@ -24,6 +24,9 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
 
     def do_GET(self, post=False):
         self.pathList = self.path.split('/')[1:]
+        if self.pathList[-1] == "":
+            # ignoring last slash
+            self.pathList = self.pathList[:-1]
         self.parsedUrl = urllib.parse.urlparse(self.path)
         self.parsedQuery = cgi.parse_qs(self.parsedUrl.query)
         logging.info(self.pathList)

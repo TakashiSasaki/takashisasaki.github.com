@@ -1,31 +1,35 @@
 __author__ = 'Takashi SASAKI'
 import http.server
 import sqlite3
-import cgi
+#import cgi
+import urllib.parse
 import logging
 
 
 def do_POST(self):
     assert isinstance(self, http.server.BaseHTTPRequestHandler)
     body_len = int(self.headers['Content-Length'])
-    body = self.rfile.read(body_len)
-    decoded_body = cgi.parse_qs(body)
-    path_bytes = decoded_body.get(b"path")[0]
-    path_utf8 = path_bytes.decode("UTF-8")
-    logging.info(path_utf8)
-    self.wfile.write(bytes(path_utf8, "UTF-8"))
+    body_bytes = self.rfile.read(body_len)
+    body_string = body_bytes.decode("ASCII")
+    body_decoded = urllib.parse.unquote(body_string, "UTF-8")
+    body_query = urllib.parse.parse_qs(body_decoded)
+
+    path = body_query.get("path")[0]
+    logging.info(path)
+    self.send_header("Content-Type", "text/plain; charset=UTF-8")
+    self.wfile.write(bytes(path, "UTF-8"))
     pass
 
 
 def do_GET(self):
     assert isinstance(self, http.server.BaseHTTPRequestHandler)
+    self.send_header("Content-Type", "text/html; charset=UTF-8")
     self.wfile.write(bytes("""<html><head><title></title></head><body>
     <form method="POST">
         <input name="path" placeholder="ファイルシステム上のパス">
         <input type="SUBMIT">
     </form>
     </body></html>""", "UTF-8"))
-    pass
 
 
 class CrawlerTable(object):
