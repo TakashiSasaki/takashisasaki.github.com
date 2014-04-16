@@ -1,11 +1,19 @@
 __author__ = 'Takashi SASAKI'
 import http.server
 import sqlite3
+import cgi
+import logging
 
 
 def do_POST(self):
     assert isinstance(self, http.server.BaseHTTPRequestHandler)
-    self.wfile.write(bytes("do_POST", "UTF-8"))
+    body_len = int(self.headers['Content-Length'])
+    body = self.rfile.read(body_len)
+    decoded_body = cgi.parse_qs(body)
+    path_bytes = decoded_body.get(b"path")[0]
+    path_utf8 = path_bytes.decode("UTF-8")
+    logging.info(path_utf8)
+    self.wfile.write(bytes(path_utf8, "UTF-8"))
     pass
 
 
