@@ -35,6 +35,12 @@ class WalkThread(threading.Thread):
             return threading.Thread.isAlive(cls.thread)
         return False
 
+    @classmethod
+    def getCount(cls):
+        if cls.thread is not None:
+            return cls.thread.count
+        return 0
+
     def __init__(self, path, max):
         threading.Thread.__init__(self)
         if self.isAlive():
@@ -45,14 +51,14 @@ class WalkThread(threading.Thread):
 
     def run(self):
         walk_table = WalkTable()
-        count = 0
+        self.count = 0
         for dpath, dnames, fnames in os.walk(self.path):
             for dname in dnames:
                 walk_table.insert(dpath + os.path.sep + dname)
             for fname in fnames:
                 walk_table.insert(dpath + os.path.sep + fname)
-            count += 1
-            if count == max: break
+            self.count += 1
+            if self.count == max: break
 
 
 def do_POST(self):
@@ -81,7 +87,10 @@ def do_GET(self):
     self.send_response(200)
     self.send_header("Content-Type", "text/plain; charset=UTF-8")
     self.end_headers()
+
     if WalkThread.thread:
-        self.wfile.write(bytes("WalkThread is running", "UTF-8"))
+        self.wfile.write(bytes("WalkThread is running\n", "UTF-8"))
     else:
-        self.wfile.write(bytes("WalkThread is not running", "UTF-8"))
+        self.wfile.write(bytes("WalkThread is not running\n", "UTF-8"))
+
+    self.wfile.write(bytes("count = %s\n" % WalkThread.getCount(), "UTF-8"))
