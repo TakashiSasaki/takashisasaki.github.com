@@ -2,3 +2,5 @@
 .idea/workspace.xml
 *.xml___jb_bak___
 *.html___jb_old___
+crawler.sqlite
+crawler.sqlite-journal

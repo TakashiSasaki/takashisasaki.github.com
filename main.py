@@ -41,22 +41,25 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             return
 
         try:
-            if (len(self.pathList) == 1):
-                module = __import__(self.pathList[0], globals=globals(), locals=locals())
-                if post == True:
-                    try:
-                        module.do_POST(self)
-                        return
-                    except Exception as e:
-                        self.send_error(500, str(e))
-                        return
-                else:
-                    try:
-                        module.do_GET(self)
-                        return
-                    except Exception as e:
-                        self.send_error(500, str(e))
-                        return
+            module_name = ".".join(self.pathList)
+            module = __import__(module_name, globals=globals(), locals=locals())
+            for submodule_name in self.pathList[1:]:
+                module = getattr(module, submodule_name)
+            if post == True:
+                try:
+                    module.do_POST(self)
+                    return
+                except Exception as e:
+                    self.send_error(500, str(e))
+                    return
+            else:
+                try:
+                    module.do_GET(self)
+                    return
+                except Exception as e:
+                    self.send_error(500, str(e))
+                    return
+
         except ImportError as e:
             http.server.SimpleHTTPRequestHandler.do_GET(self)
             return
