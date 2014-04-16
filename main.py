@@ -44,11 +44,19 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             if (len(self.pathList) == 1):
                 module = __import__(self.pathList[0], globals=globals(), locals=locals())
                 if post == True:
-                    module.do_POST(self)
-                    return
+                    try:
+                        module.do_POST(self)
+                        return
+                    except Exception as e:
+                        self.send_error(500, str(e))
+                        return
                 else:
-                    module.do_GET(self)
-                    return
+                    try:
+                        module.do_GET(self)
+                        return
+                    except Exception as e:
+                        self.send_error(500, str(e))
+                        return
         except ImportError as e:
             http.server.SimpleHTTPRequestHandler.do_GET(self)
             return
@@ -56,8 +64,6 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             http.server.SimpleHTTPRequestHandler.do_GET(self)
             return
 
-
-        #data = {"server_id": "2T6CnTUUcqkY"}
         data = self.parsedQuery
         if self.parsedQuery.get("callback") is not None:
             self.send_response(200)
