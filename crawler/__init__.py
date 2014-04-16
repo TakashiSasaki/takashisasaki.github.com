@@ -4,6 +4,7 @@ import sqlite3
 #import cgi
 import urllib.parse
 import logging
+import os
 
 
 def do_POST(self):
@@ -15,10 +16,20 @@ def do_POST(self):
     body_query = urllib.parse.parse_qs(body_decoded)
 
     path = body_query.get("path")[0]
+    max = body_query.get("max")[0]
+    max = int(max)
     logging.info(path)
+    self.send_response(200)
     self.send_header("Content-Type", "text/plain; charset=UTF-8")
+    self.end_headers()
+
+    count = 0
+    for dpath, dnames, fnames in os.walk(path):
+        for x in dnames:
+            self.wfile.write(bytes(x, "UTF-8"))
+        count += 1
+        if count == max: break
     self.wfile.write(bytes(path, "UTF-8"))
-    pass
 
 
 def do_GET(self):
@@ -27,6 +38,7 @@ def do_GET(self):
     self.wfile.write(bytes("""<html><head><title></title></head><body>
     <form method="POST">
         <input name="path" placeholder="ファイルシステム上のパス">
+        <input name="max" value="1000">
         <input type="SUBMIT">
     </form>
     </body></html>""", "UTF-8"))
