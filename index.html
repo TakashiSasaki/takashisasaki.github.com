@@ -1,43 +1,145 @@
-<html>
+<!DOCTYPE html>
+<html manifest="manifest.appcache_">
 <head><title>ぼく</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css"/>
     <link rel="stylesheet" href="icon.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-<div data-role="page">
+<div id='left-panel' data-display="overlay" data-theme="b" data-role="panel">
+    <div data-role="collapsible">
+        <ul data-role="listview"> '
+            <li><a href="#index">ホーム</a></li>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <ul data-role="listview">
+            <li><a href="#appcache">アプリケーションキャッシュの操作</a></li>
+            <li><a href="html/google-oauth2-client-side.html">OAuth2 for JavaScript Apps</a></li>
+            <li><a href="html/google-oauth2-installed-apps.html">OAuth2 for Installed Apps</a></li>
+            <li><a href="html/google-oauth2-devices.html">OAuth2 for Devices</a></li>
+            <li><a href="html/google-drive.html">Google Drive API Demo</a></li>
+            <li><a href="html/test.html">test</a></li>
+            <li><a href="html/iframes.html">iframeに関するテスト</a></li>
+        </ul>
+    </div>
+</div>
+<div id="right-panel" data-display="overlay" data-theme="a" data-position="right">
+    <ul data-role="listview"></ul>
+</div>
+<div data-role="page" id="index">
     <header data-role="header" data-position="fixed">
-        <a href="#panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+        <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
 
-        <h1>takashisasaki.github.io</h1>
+        <h1></h1>
     </header>
     <div class="ui-content" role="main">
-        <div>
-            <a href="https://mail.google.com/mail/u/0/" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-gmail"
-               target="_blank">Gmail</a>
-            <a href="http://keep.google.com" class="ui-btn ui-btn-icon-left ui-icon-keep ui-btn-inline" target="_blank">Google
-                Keep</a>
-            <a href="http://twitter.com/" class="ui-btn ui-btn-icon-left ui-btn-inline ui-icon-twitter" target="_blank">Twitter</a>
-            <a href="https://picasaweb.google.com" class="ui-btn ui-btn-icon-left ui-icon-picasaweb ui-btn-inline"
-               target="_blank">Picasa Web Albums</a>
-            <a href="https://plus.google.com/photos" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-google-photo"
-               target="_blank">Google+ フォト</a>
-            <a href="https://www.google.com/calendar/render"
-               class="ui-btn ui-btn-icon-left ui-icon-google-calendar ui-btn-inline" target="_blank">Google カレンダー</a>
-            <a href="http://www.yahoo.co.jp/" class="ui-btn ui-btn-icon-left ui-icon-google-yahoo ui-btn-inline">Yahoo!
-                Japan</a>
-        </div>
+        <img src="img/bon.jpg">
     </div>
-
     <div data-role="footer">
-        <h3></h3>
+        <h1></h1>
+    </div>
+</div>
+<div data-role="page" id="appcache">
+    <header data-role="header" data-position="fixed">
+        <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+
+        <h1>ここはどこ？</h1>
+    </header>
+    <div class="ui-content" role="main">
+        <form>
+            <div class="ui-field-contain">
+                <label for="appcache-chrome">Chromeでは次の特殊なURLによりアプリケーションキャッシュの状態を確認できます</label>
+                <input id="appcache-chrome" readonly="true" value="about:appcache-internals" onClick="this.select();">
+            </div>
+
+            <div class=" ui-field-contain">
+                <label for="appcache-function">ブラウザのアプリケーションキャッシュ対応</label>
+                <input value="未確認" readonly="true" id="appcache-function">
+            </div>
+            <div class="ui-field-contain">
+                <label for="appcache-status">アプリケーションキャッシュの状態</label>
+                <input value="状態を調べる前" readonly="true" id="appcache-status">
+            </div>
+        </form>
+    </div>
+    <button>アプリケーションキャッシュマニフェストファイルを取りに行く</button>
+    <div data-role="footer">
+        <h1>ここはどこ？</h1>
     </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
-おわり
+<script src='https://www.google.com/jsapi'></script>
+<script src="http://url.websanova.com/url.min.js"></script>
+<script src="http://timeago.yarp.com/jquery.timeago.js"></script>
 <script>
-    $(document).on("pagecreate", function (e, ui) {
+    $("#index").on("pagecreate", function (e, ui) {
+        var page = localStorage.getItem("page");
+        localStorage.removeItem("page");
+        if (page) {
+            setTimeout(function () {
+                $.mobile.changePage(page);
+            }, 1000);
+        } else {
+            setTimeout(function () {
+                $.mobile.changePage("html/bookmarks.html");
+            }, 200000);
+        }
+    });
+    $("#index").one("pagecreate", function (e, ui) {
+        window.applicationCache.addEventListener('updateready', function () {
+            window.location.reload();
+            //alert("updateready");
+        });
+        //window.applicationCache.update();
+    });
+</script>
+<script>
+    $("#appcache").on("pagecreate", function (e, ui) {
+                if (window.applicationCache) {
+                    $("#appcache-function").val("対応");
+                } else {
+                    $("#appcache-function").val("非対応");
+                }
+                updateAppcacheStatus();
+            }
+    );
+
+    function updateAppcacheStatus() {
+        var ac = window.applicationCache;
+        if (ac.status == ac.UNCACHED) {
+            $("#appcache-status").val("キャッシュ不能、マニフェストが無い (UNCACHED)");
+        } else if (ac.status == ac.IDLE) {
+            $("#appcache-status").val("アイドル状態 (IDLE)");
+        } else if (ac.status == ac.CHECKING) {
+            $("#appcache-status").val("マニフェストチェック中 (CHECKING)");
+        } else if (ac.status == ac.DOWNLOADING) {
+            $("#appcache-status").val("ダウンロード中 (DOWNLOADING");
+        } else if (ac.status == ac.UPDATEREADY) {
+            $("#appcache-status").val("ダウンロード終了 (UPDATEREADY)");
+        } else if (ac.status == ac.OBSOLETE) {
+            $("#appcache-status").val("腐っている (OBSOLETE");
+        } else {
+            $("#appcache-status").val("状態不明");
+        }
+    }
+
+    $("#appcache BUTTON").on("click", function () {
+        window.applicationCache.addEventListener('updateready', function () {
+        });
+        setTimeout(updateAppcacheStatus(), 100);
+        setTimeout(updateAppcacheStatus(), 100);
+        setTimeout(updateAppcacheStatus(), 100);
+        setTimeout(updateAppcacheStatus(), 100);
+        setTimeout(updateAppcacheStatus(), 100);
+        window.applicationCache.update();
+    });
+
+</script>
+<script>
+    $(document).on("swiperight", function () {
+        $("#left-panel").panel("open");
     });
 </script>
 <script src="panel.js"></script>

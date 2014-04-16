@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        localStorage.setItem("page", "html/google-drive.html");
+        setTimeout(function () {
+            document.location = "../index.html";
+        }, 100);
+    </script>
+</head>
+<body>
+<div data-role="page" id="google-drive">
+    <header data-role="header" data-position="fixed">
+        <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+
+        <h1>Googleドライブの文書のタイトル一覧を取得する。</h1>
+    </header>
+    <div class="ui-content" role="main">
+        <div>Google APIs Client Library for JavaScriptを使うデモ。
+            はじめにライブラリ全体に渡って有効な認証を得る。
+            別のウィンドウが開いて、認証および認可を求められる。
+            一度認可すると別のウィンドウが開いてもすぐに閉じる。
+        </div>
+        <button class="ui-btn auth">認証を得る</button>
+        <button class="ui-btn list">ファイルの一覧を得る</button>
+        <div id="file-list-table"></div>
+    </div>
+
+    <div data-role="footer">
+        <h3></h3>
+    </div>
+    <script src="google-drive.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        setTimeout(function () {
+            localStorage.setItem("page", "html/google-oauth2-devices.html");
+            document.location = "../index.html";
+        }, 100)
+    </script>
+</head>
+<body>
+<div data-role="page" id="google-oauth2-devices">
+    <header data-role="header">
+        <h3>
+            Confidential Client with Authorization Code Grant
+        </h3>
+        <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+    </header>
+    <p>テンキーなどの簡単な入力装置しか持たないセットトップボックスなどが
+        Google APIを使うためにOAuth2での認可を受けるには、
+        ブラウザ上で動くJavaScriptアプリのためには<span class="auth_endpoint var"></span>をエンドポイントとしたImplicit Grantを行う。
+        認可コードを得る手順を省略してアクセストークンが得られる。
+        client_secretは要求されないためPublicクライアント扱いである。
+        リフレッシュトークンは得られないので、頻繁に認可が必要となる。
+    </p>
+
+    <p>下のボタンを押すとXmlHttpRequestでデバイスコードとユーザーコードを取得しようとするが、
+        サーバーからのレスポンスヘッダにAccess-Control-Allow-Originが設定されていないため失敗する。</p>
+    <button>デバイスコードとユーザーコードを取得する</button>
+    <input class="device_code">
+    <input class="user_code">
+    <input class="test">
+    <script src="google-oauth2.js"></script>
+    <script src="google-oauth2-devices.js"></script>
+</div>
+</body>
+</html>

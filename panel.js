@@ -1,21 +1,14 @@
-$(document).one("pagebeforecreate", function (e, ui) {
-
-    var panel = "";
-    panel += '<ul data-role="listview">';
-    panel += '<li><a href="index.html">ホーム</a></li>';
-    panel += '<li data-role="list-divider">実験</li>';
-    panel += '<li><a href="google-oauth2-js.html#installed-apps">OAuth2 for Installed Apps</a></li>';
-    panel += '<li><a href="google-oauth2-js.html#client-side">OAuth2 for Client-side</a></li>';
-    panel += '<li><a href="google-oauth2-js.html#devices">OAuth2 for Devices</a></li>';
-    panel += '</ul>';
-    panel += '<div id="script-buffer"></div>';
-    panel += "";
+$(document).one("pagecreate", function (e, ui) {
+    //alert("pagebeforecreate");
     //$.mobile.pageContainer.append(panel);
     //$.mobile.pageContainer.prepend(panel);
-    $("#panel").append(panel);
-    //$("body").append(panel);
-    $("#panel").panel();
-    $("#panel ul").listview();
+    //$("body").append(panel)
+    //$("#left-panel").append('<div id="script-buffer"></div>');
+    $("#left-panel").panel();
+    $("#left-panel UL").listview();
+    //$("#left-panel DIV").collapsible();
+    $("#right-panel").panel({ dismissible: false });
+    $("#right-panel UL").listview();
 
     localhostPingCallback();
 });

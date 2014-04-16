@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        setTimeout(function () {
+            localStorage.setItem("page", "html/bookmarks.html");
+            document.location = "../index.html";
+        }, 0)
+    </script>
+</head>
+<body>
+<div data-role="page" id="bookmarks">
+    <header data-role="header" data-position="fixed">
+        <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+
+        <h1>ブックマーク</h1>
+    </header>
+    <div class="ui-content" role="main">
+        <div>
+            <a href="https://mail.google.com/mail/u/0/" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-gmail"
+               target="_blank">Gmail</a>
+            <a href="http://keep.google.com" class="ui-btn ui-btn-icon-left ui-icon-keep ui-btn-inline" target="_blank">Google
+                Keep</a>
+            <a href="http://twitter.com/" class="ui-btn ui-btn-icon-left ui-btn-inline ui-icon-twitter" target="_blank">Twitter</a>
+            <a href="https://picasaweb.google.com" class="ui-btn ui-btn-icon-left ui-icon-picasaweb ui-btn-inline"
+               target="_blank">Picasa Web Albums</a>
+            <a href="https://plus.google.com/photos" class="ui-btn ui-btn-inline ui-btn-icon-left ui-icon-google-photo"
+               target="_blank">Google+ フォト</a>
+            <a href="https://www.google.com/calendar/render"
+               class="ui-btn ui-btn-icon-left ui-icon-google-calendar ui-btn-inline" target="_blank">Google カレンダー</a>
+            <a href="http://www.yahoo.co.jp/" class="ui-btn ui-btn-icon-left ui-icon-google-yahoo ui-btn-inline">Yahoo!
+                Japan</a>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h3></h3>
+    </div>
+</div>
+</body>
+</html>

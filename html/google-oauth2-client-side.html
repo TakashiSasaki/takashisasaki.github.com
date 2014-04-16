@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        setTimeout(function () {
+            localStorage.setItem("page", "html/google-oauth2-client-side.html");
+            document.location = "../index.html";
+        }, 100);
+    </script>
+</head>
+<body>
+<div data-role="page" id="google-oauth2-client-side">
+    <header data-role="header">
+        <h3> OAuth2 for Client-side</h3>
+        <a href="#left-panel" class="ui-btn ui-icon-bars ui-btn-icon-left"></a>
+    </header>
+    <p>Google APIを使うためのOAuth2による認可において、
+        ブラウザ上で動くJavaScriptアプリのためには<span class="auth_endpoint var"></span>をエンドポイントとしたImplicit Grantを行う。
+        認可コードを得る手順を省略してアクセストークンが得られる。
+        client_secretは要求されないためPublicクライアント扱いである。
+        リフレッシュトークンは得られないので、頻繁に認可が必要となる。
+    </p>
+
+    <div class="ui-corner-all">
+        <div class="ui-bar ui-bar-a">
+            <h3>アクセストークンを取得</h3>
+        </div>
+        <div class="ui-body ui-body-a">
+            <a class="ui-btn ui-btn-icon-left ui-icon-oauth ui-btn-inline">アクセストークンを取得</a>
+
+            <p>上のボタンを押すと以下のURLに遷移します。</p>
+            <input readonly="true" class="url">
+
+            <div>
+                <p>直近に取得したアクセストークン（既に期限切れかもしれません）</p>
+                <input readonly="true" class="token">
+            </div>
+        </div>
+    </div>
+    <script src="google-oauth2.js"></script>
+    <script src="google-oauth2-client-side.js"></script>
+</div>
+<script src="http://url.websanova.com/url.min.js"></script>
+<script>
+    if (window.url("#access_token") != null) {
+        if (window.url("#state") == "hello+world+state") {
+            var token = window.url("#access_token");
+            localStorage.setItem("google-oauth2-client-side-token", token);
+            //$("#page-google-oauth2-client-side INPUT.token").val();
+            setTimeout(function () {
+                document.location = "../index.html";
+                //$(':mobile-pagecontainer').pagecontainer("change", "index.html", {transition: 'flip', changeHash: false});
+            }, 2000);
+        } else {
+            setTimeout(function () {
+                document.location = "../index.html";
+            }, 1000);
+        }
+    } else {
+        setTimeout(function () {
+            document.location = "../index.html";
+        }, 1000);
+    }
+</script>
+</body>
+</html>
